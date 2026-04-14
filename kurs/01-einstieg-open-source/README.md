@@ -17,6 +17,9 @@ Wir haben einen Matrix Chatroom für den Kurs. Ich könnt euch über den Button 
 5. [Communities & Gründe](05-communities-und-gruende.md) - Warum Menschen beitragen und warum du Open Source nutzen solltest
 6. [Risiken](06-open-source-risiken.md) - Supply-Chain-Angriffe, Projektabbrüche und die falsche Erwartungshaltung
 
+## Präsentation
+[digital_independence_session_1.pdf](digital_independence_session_1.pdf)
+
 ## Aufgaben für nächste Woche
 - Showcase vorbereiten (erste Gruppe)
 - Kurs Repository anschauen (wenn du das liest, bist du fertig)
