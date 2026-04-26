@@ -1,6 +1,6 @@
 # 06 - Cron & geplante Aufgaben
 
-Auf einem Server müssen viele Aufgaben regelmäßig und automatisch erledigt werden: Backups, Protokoll-Bereinigungen, Sicherheitsupdates, Datenbankwartung. Dafür gibt es unter Linux **Cron** — den eingebauten Aufgabenplaner.
+Auf einem Server müssen viele Aufgaben regelmäßig und automatisch erledigt werden: Backups, Protokoll-Bereinigungen, Sicherheitsupdates, Datenbankwartung. Dafür gibt es unter Linux [**Cron**](../glossar.md#cron--crontab) — den eingebauten Aufgabenplaner.
 
 **Windows-Analogie:** Cron ist wie der Windows Task-Planer (`taskschd.msc`), aber komplett textbasiert und viel verbreiteter auf Servern.
 
@@ -8,7 +8,7 @@ Auf einem Server müssen viele Aufgaben regelmäßig und automatisch erledigt we
 
 ## Was ist Cron?
 
-Cron ist ein Hintergrunddienst (Daemon), der kontinuierlich läuft und zu festgelegten Zeiten Befehle ausführt. Die Zeitpläne werden in einer Textdatei namens **Crontab** (Cron Table) definiert.
+Cron ist ein Hintergrunddienst ([Daemon](../glossar.md#daemon)), der kontinuierlich läuft und zu festgelegten Zeiten Befehle ausführt. Die Zeitpläne werden in einer Textdatei namens **Crontab** (Cron Table) definiert.
 
 Cron läuft automatisch beim Systemstart und braucht keine manuelle Aktivierung:
 

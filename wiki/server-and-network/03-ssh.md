@@ -2,7 +2,7 @@
 
 ## 1. Was ist SSH?
 
-SSH (Secure Shell) ist ein Protokoll, das eine sichere, verschlüsselte Verbindung zu einem anderen Computer über das Netzwerk herstellt. Mit SSH kannst du auf deinem Server arbeiten, als ob du direkt davor sitzen würdest.
+[SSH](../glossar.md#ssh-secure-shell) (Secure Shell) ist ein Protokoll, das eine sichere, verschlüsselte Verbindung zu einem anderen Computer über das Netzwerk herstellt. Mit SSH kannst du auf deinem Server arbeiten, als ob du direkt davor sitzen würdest.
 
 **Windows-Analogie:** Wie Remote Desktop (RDP), aber nur mit Textkonsole – und deutlich sicherer und leichter automatisierbar. Moderne Windows-Versionen haben ebenfalls einen SSH-Client eingebaut.
 
@@ -231,11 +231,11 @@ sudo apt install fail2ban
 sudo systemctl enable --now fail2ban
 ```
 
-Fail2ban sperrt IP-Adressen automatisch nach mehreren fehlgeschlagenen Login-Versuchen.
+[Fail2Ban](../glossar.md#fail2ban) sperrt IP-Adressen automatisch nach mehreren fehlgeschlagenen Login-Versuchen.
 
 ## 8. SSH-Agent (Passphrase nur einmal eingeben)
 
-Wenn dein privater Schlüssel mit einer Passphrase geschützt ist, musst du sie nicht bei jeder Verbindung eingeben:
+Wenn dein privater Schlüssel mit einer [Passphrase](../glossar.md#passphrase) geschützt ist, musst du sie nicht bei jeder Verbindung eingeben:
 
 ```bash
 # SSH-Agent starten und Schlüssel hinzufügen

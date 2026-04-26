@@ -119,7 +119,7 @@ uname -a
 
 ## Option 4: VPS in der Cloud
 
-Ein **Virtual Private Server (VPS)** ist ein Linux-Server, der bei einem Anbieter läuft.
+Ein **[Virtual Private Server (VPS)](../../wiki/glossar.md#vps-virtual-private-server)** ist ein Linux-Server, der bei einem Anbieter läuft.
 Du bezahlst monatlich und hast vollen Root-Zugriff.
 
 ### Anbieter
@@ -145,7 +145,7 @@ adduser admin
 usermod -aG sudo admin
 ```
 
-Mehr zum Thema VPS findest du unter [../../wiki/server-and-network/06-vps.md](../server-and-network/06-vps.md).
+Mehr zum Thema VPS findest du unter [../../wiki/server-and-network/06-vps.md](../../wiki/server-and-network/06-vps.md).
 
 ---
 
@@ -180,7 +180,7 @@ sudo ufw status
 → Netzwerkadapter in den VM-Einstellungen auf „NAT" oder „Netzwerkbrücke" setzen.
 
 **SSH-Verbindung schlägt fehl**
-→ Prüfe, ob OpenSSH installiert und der Port 22 in der Firewall freigegeben ist:
+→ Prüfe, ob OpenSSH installiert und der Port 22 in der [Firewall](../../wiki/glossar.md#firewall) freigegeben ist:
 
 ```bash
 sudo systemctl status ssh

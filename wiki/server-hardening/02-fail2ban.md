@@ -2,13 +2,13 @@
 
 ## 1. Was ist Fail2ban?
 
-Wenn dein Server im Internet erreichbar ist, versuchen automatisierte Bots ständig, sich einzuloggen – oft Tausende Versuche pro Tag. Sie probieren einfach viele Passwörter durch (sogenannte Brute-Force-Angriffe).
+Wenn dein Server im Internet erreichbar ist, versuchen automatisierte Bots ständig, sich einzuloggen – oft Tausende Versuche pro Tag. Sie probieren einfach viele Passwörter durch (sogenannte [Brute-Force-Angriffe](../glossar.md#brute-force-angriff)).
 
 Fail2ban beobachtet deine Log-Dateien und sperrt IP-Adressen automatisch, wenn sie zu oft falsche Passwörter eingeben.
 
-**Windows-Analogie:** Windows sperrt ein Benutzerkonto nach zu vielen Fehlversuchen (Account Lockout Policy). Fail2ban macht dasselbe, aber sperrt die angreifende IP-Adresse in der Firewall – nicht nur das Konto.
+**Windows-Analogie:** Windows sperrt ein Benutzerkonto nach zu vielen Fehlversuchen (Account Lockout Policy). Fail2ban macht dasselbe, aber sperrt die angreifende IP-Adresse in der [Firewall](../glossar.md#firewall) – nicht nur das Konto.
 
-Fail2ban arbeitet dabei mit UFW zusammen: Es fügt automatisch Firewall-Regeln hinzu, um eine IP zu sperren, und entfernt sie wieder nach einer festgelegten Zeit.
+Fail2ban arbeitet dabei mit [UFW](../glossar.md#ufw-uncomplicated-firewall) zusammen: Es fügt automatisch Firewall-Regeln hinzu, um eine IP zu sperren, und entfernt sie wieder nach einer festgelegten Zeit.
 
 ## 2. Installation
 
@@ -148,7 +148,7 @@ curl ifconfig.me
 
 ## 9. Eigene IP dauerhaft von der Sperre ausschließen
 
-Damit du dich nicht selbst aussperrst, kannst du deine IP auf die Whitelist setzen. In `/etc/fail2ban/jail.local` unter `[DEFAULT]`:
+Damit du dich nicht selbst aussperrst, kannst du deine IP auf die [Whitelist](../glossar.md#whitelist) setzen. In `/etc/fail2ban/jail.local` unter `[DEFAULT]`:
 
 ```ini
 [DEFAULT]

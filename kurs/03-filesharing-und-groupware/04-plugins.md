@@ -17,11 +17,11 @@ Einige Apps kommen vorinstalliert und sind direkt nutzbar:
 |-----------------|--------------------------------------------|
 | Files           | Dateimanager (Kern-App)                    |
 | Photos          | Fotogalerie mit automatischer Organisation |
-| Calendar        | CalDAV-Kalender                            |
-| Contacts        | CardDAV-Adressbuch                         |
+| Calendar        | [CalDAV](../../wiki/glossar.md#caldav)-Kalender                            |
+| Contacts        | [CardDAV](../../wiki/glossar.md#carddav)-Adressbuch                         |
 | Talk            | Chat und Videokonferenzen                  |
 | Notes           | Einfache Markdown-Notizen                  |
-| Deck            | Kanban-Board (ähnlich Trello)              |
+| Deck            | [Kanban-Board](../../wiki/glossar.md#kanban-board) (ähnlich Trello)              |
 | Mail            | E-Mail-Client (kein Mail-Server!)          |
 
 ---
@@ -29,20 +29,20 @@ Einige Apps kommen vorinstalliert und sind direkt nutzbar:
 ## Empfehlenswerte Apps
 
 ### Collabora Online / OnlyOffice
-Vollwertige Office-Editoren direkt im Browser. Wichtig: Diese Apps installieren nur den **Connector**. Der eigentliche Office-Server ist ein separater Docker-Container.
+Vollwertige Office-Editoren direkt im Browser. Wichtig: Diese Apps installieren nur den **Connector**. Der eigentliche Office-Server ist ein separater [Docker](../../wiki/glossar.md#docker)-Container.
 
 AIO kann Collabora als optionale Komponente mitinstallieren.
 
 **Wählen zwischen beiden:**
-- **Collabora** (LibreOffice-basiert): Bessere Kompatibilität mit OpenDocument, DSGVO-freundlich
-- **OnlyOffice**: Bessere Microsoft-Office-Kompatibilität, von vielen als "besser aussehend" wahrgenommen
+- **Collabora** (LibreOffice-basiert): Bessere Kompatibilität mit OpenDocument, [DSGVO](../../wiki/glossar.md#dsgvo-datenschutz-grundverordnung)-freundlich
+- **[OnlyOffice](../../wiki/glossar.md#onlyoffice)**: Bessere Microsoft-Office-Kompatibilität, von vielen als "besser aussehend" wahrgenommen
 
 ### Nextcloud Passwords
 Passwort-Manager mit Browser-Extension. Nutzt die Nextcloud-Instanz als Backend.
 Alternative zu Bitwarden für alle, die alles auf einem Server konsolidieren wollen.
 
 ### External Storage Support
-Erlaubt das Einbinden externer Speicher: SFTP, S3, SMB/CIFS, FTP.
+Erlaubt das Einbinden externer Speicher: [SFTP](../../wiki/glossar.md#sftp-ssh-file-transfer-protocol), [S3](../../wiki/glossar.md#s3-simple-storage-service), [SMB](../../wiki/glossar.md#smb-server-message-block)/CIFS, [FTP](../../wiki/glossar.md#ftp-file-transfer-protocol).
 Nützlich, wenn Daten auf einem NAS liegen sollen und Nextcloud nur als Frontend dient.
 
 ### Two-Factor Authentication (TOTP)

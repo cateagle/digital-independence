@@ -12,7 +12,7 @@ Achtet darauf, dass wir die richtige ISO für eure CPU habt. Vermutlich habt ihr
 
 ### Warum eine VM?
 
-Wir nutzen eine virtuelle Maschine, um einen echten Server zu simulieren, ohne etwas am eigenen Rechner zu riskieren. Eine VM kannst du jederzeit löschen und neu aufsetzen. Das ist auch der Grund, warum wir **kein WSL** nutzen: WSL fühlt sich wie ein Linux-Terminal an, verhält sich aber nicht wie ein echter Server. Da wir Docker installieren werden, verwenden wir auch keinen Container um das System auszuprobieren.
+Wir nutzen eine virtuelle Maschine, um einen echten Server zu simulieren, ohne etwas am eigenen Rechner zu riskieren. Eine VM kannst du jederzeit löschen und neu aufsetzen. Das ist auch der Grund, warum wir **kein WSL** nutzen: WSL fühlt sich wie ein Linux-Terminal an, verhält sich aber nicht wie ein echter Server. Da wir [Docker](../../wiki/glossar.md#docker) installieren werden, verwenden wir auch keinen [Container](../../wiki/glossar.md#container) um das System auszuprobieren.
 
 ### VirtualBox-Einstellungen
 
@@ -55,7 +55,7 @@ sudo apt update && sudo apt upgrade -y
 
 ### SSH (Secure Shell) Einrichten
 
-Noch ist der Server nicht über SSH (Secure Shell) erreichbar. Dafür müssen wir ssh zuerst aktivieren.
+Noch ist der Server nicht über [SSH](../../wiki/glossar.md#ssh-secure-shell) (Secure Shell) erreichbar. Dafür müssen wir ssh zuerst aktivieren.
 
 ```bash
 sudo systemctl enable --now ssh
@@ -63,8 +63,8 @@ sudo systemctl enable --now ssh
 
 > **Warnung**
 > Wir können das so einfach machen, weil der Server nur in unserer virtuellen Maschine läuft. Im freien Internet dauert es nur wenige Minuten bis die ersten automatisierten Angriffe versuchen das Passwort über SSH versuchen zu knacken. In der Praxis würden wir daher vorher:
-> - Eine Firewall vorschalten
-> - Rate Limiting einrichten
+> - Eine [Firewall](../../wiki/glossar.md#firewall) vorschalten
+> - [Rate Limiting](../../wiki/glossar.md#rate-limiting) einrichten
 > - Root Login über SSH blockieren
 > - Einen SSH Key statt einfachem Passwort einrichten und Passwort-Login verbieten
 > - SSH Port vom Standardport 22 auf einen ungewöhnlichen Port verlegen
@@ -77,7 +77,7 @@ sudo systemctl enable --now ssh
 
 Jetzt verbinden wir uns mit der VM über unser Terminal von unserem Hauptsystem. Wir könnten das natürlich auch direkt über die VM machen, aber in der Praxis haben wir keinen Bildschirm am Server und der Server könnte überall auf der Welt stehen. Daher machen wir das so, wie wir es auch in der Praxis machen würden.
 
-Wenn unser hauptsystem Linux ist, dann öffnen wir einfach eine Shell und geben das hier ein:
+Wenn unser hauptsystem Linux ist, dann öffnen wir einfach eine [Shell](../../wiki/glossar.md#shell) und geben das hier ein:
 ```bash
 ssh -p 8022 username@127.0.0.1
 ```
@@ -182,7 +182,7 @@ ll
 
 > **Warum `source` und nicht einfach die Datei ausführen?**  
 > Ein normales `./skript.sh` startet eine neue Shell, macht die Änderungen dort und die neue Shell wird danach wieder geschlossen. 
-> `source` führt die Befehle direkt in der aktuellen Shell aus, deshalb bleiben Variablen und Aliases erhalten.
+> `source` führt die Befehle direkt in der aktuellen Shell aus, deshalb bleiben Variablen und [Aliases](../../wiki/glossar.md#alias-shell-alias) erhalten.
 
 > **Exkurs: Weitere Config-Dateien**  
 > `.bashrc` wird bei jeder interaktiven Shell geladen. `.bash_profile` oder `.profile` werden nur beim Login geladen. Systemweite Einstellungen liegen in `/etc/environment` und `/etc/bash.bashrc`. 
@@ -214,7 +214,7 @@ Wenn du `apt update` nicht vorher ausführst, dann kann es passieren, dass du gl
 > **Exkurs: unattended-upgrades**
 > Auf Linux passiert grundsätzlich eigentlich nichts, wenn man es nicht aktiviert. Während Windows einen immer gleich erstmal mit regemäßigen Updates nervt, muss man das in Linux selbst aktivieren. Das ist keine ganz einfache Entscheidung. Dafür spricht, dass man immer die neuesten Versionen hat und damit bekannte Sicherheitslücken relativ schnell schließt. Dagegen spricht, dass jedes Upgrade auch Dinge kaputt machen kann. Je nach Use Case kann also das eine oder das andere Korrekt sein. 
 > Empfehlung: Wenn dein Server auch mal crashen darf, dann sind die Risiken durch die automatischem Upgrades vermutlich geringer als das Risiko ein paar monate die Upgrades zu vergessen und dann mit bekannten Sicherheitslücken rumzulaufen.
-> Hier geht es zur Installation: [wiki/server-maintenance/02-updates-upgrades.md](wiki/server-maintenance/02-updates-upgrades.md)
+> Hier geht es zur Installation: [wiki/server-maintenance/02-updates-upgrades.md](../../wiki/server-maintenance/02-updates-upgrades.md)
 
 ### Pakete installieren
 
@@ -323,15 +323,15 @@ docker run hello-world
 
 ### Was ist Docker Compose?
 
-Docker Compose erlaubt es, Container nicht mit langen `docker run`-Befehlen zu starten, sondern ihre Konfiguration in einer YAML-Datei zu speichern. Das ist reproduzierbar, versionierbar und lesbar.
+[Docker Compose](../../wiki/glossar.md#docker-compose) erlaubt es, Container nicht mit langen `docker run`-Befehlen zu starten, sondern ihre Konfiguration in einer [YAML](../../wiki/glossar.md#yaml-yet-another-markup-language)-Datei zu speichern. Das ist reproduzierbar, versionierbar und lesbar.
 
-Wir starten [Excalidraw](https://excalidraw.com/), ein kollaboratives Whiteboard-Tool. Sonst nur als SaaS verfügbar, läuft hier komplett auf der eigenen VM. Mehrere Personen können gleichzeitig im selben Canvas zeichnen.
+Wir starten [Excalidraw](https://excalidraw.com/), ein kollaboratives Whiteboard-Tool. Sonst nur als [SaaS](../../wiki/glossar.md#saas-software-as-a-service) verfügbar, läuft hier komplett auf der eigenen VM. Mehrere Personen können gleichzeitig im selben Canvas zeichnen.
 
 Das Setup besteht aus vier Containern, die zusammenarbeiten:
 - **excalidraw**: die eigentliche Web-UI
 - **excalidraw-storage-backend**: speichert Zeichnungen
 - **excalidraw-room**: koordiniert die Echtzeit-Zusammenarbeit
-- **redis**: Zwischenspeicher für den Storage-Backend
+- **[redis](../../wiki/glossar.md#redis)**: Zwischenspeicher für den Storage-Backend
 
 ### Arbeitsverzeichnis anlegen
 

@@ -1,6 +1,6 @@
 # Linux-Distributionen
 
-Linux selbst ist nur der Kernel. Eine **Distribution** (kurz: Distro) packt den Kernel zusammen mit allem, was man zum Arbeiten braucht: Systemwerkzeuge, einen Paketmanager, vorinstallierte Software und oft eine grafische Oberfläche.
+Linux selbst ist nur der [Kernel](../../wiki/glossar.md#kernel). Eine **[Distribution](../../wiki/glossar.md#distribution-linux)** (kurz: [Distro](../../wiki/glossar.md#distro)) packt den Kernel zusammen mit allem, was man zum Arbeiten braucht: Systemwerkzeuge, einen Paketmanager, vorinstallierte Software und oft eine grafische Oberfläche.
 
 **Windows-Analogie:** Wenn Linux der Kernel ist, dann ist eine Distribution wie eine vollständige Windows-Edition, Windows Home, Pro oder Server. Alle basieren auf demselben Kern, unterscheiden sich aber in Ausstattung und Zielgruppe.
 
@@ -27,7 +27,7 @@ Hier gehen wir primär auf Server Distributionen ein und übersehen auch für di
 
 ### Ubuntu
 
-Die beliebteste Einsteiger-Distribution. Basiert auf Debian, erscheint alle 2 Jahre als **LTS-Version** (Long Term Support) mit 5 Jahren Support.
+Die beliebteste Einsteiger-Distribution. Basiert auf [Debian](../../wiki/glossar.md#debian), erscheint alle 2 Jahre als **[LTS](../../wiki/glossar.md#lts-long-term-support)-Version** (Long Term Support) mit 5 Jahren Support.
 
 - **Paketmanager:** `apt`
 - **Zielgruppe:** Einsteiger, Desktops, Server
@@ -41,7 +41,7 @@ sudo apt update && sudo apt upgrade
 
 ### Debian
 
-Das Fundament, auf dem Ubuntu aufbaut. Gilt als besonders **stabil und konservativ**. Neue Software-Versionen kommen erst nach ausgiebigen Tests ins System.
+Das Fundament, auf dem [Ubuntu](../../wiki/glossar.md#ubuntu) aufbaut. Gilt als besonders **stabil und konservativ**. Neue Software-Versionen kommen erst nach ausgiebigen Tests ins System.
 - **Paketmanager:** `apt`
 - **Zielgruppe:** Server, erfahrene Nutzer
 - **Besonderheit:** Sehr langlebige Releases, minimale Installation möglich
@@ -108,7 +108,7 @@ Warum?
 - Riesige Community → bei Problemen findet man sofort Hilfe
 - Die meisten Tutorials im Internet beziehen sich auf `apt`-basierte Systeme
 - Sehr guter Support-Zeitraum (5+ Jahre)
-- Weit verbreitet bei VPS-Anbietern (Hetzner, DigitalOcean, etc.)
+- Weit verbreitet bei [VPS](../../wiki/glossar.md#vps-virtual-private-server)-Anbietern (Hetzner, DigitalOcean, etc.)
 
 ---
 

@@ -1,6 +1,6 @@
 # 07 - Shell-Scripting-Grundlagen
 
-Shell-Skripte sind Textdateien, die Bash-Befehle enthalten — sie werden der Reihe nach ausgeführt, als würdest du jeden Befehl selbst eintippen. Damit kannst du wiederkehrende Aufgaben automatisieren, ohne sie jedes Mal von Hand zu erledigen.
+[Shell](../glossar.md#shell)-Skripte sind Textdateien, die [Bash](../glossar.md#bash)-Befehle enthalten — sie werden der Reihe nach ausgeführt, als würdest du jeden Befehl selbst eintippen. Damit kannst du wiederkehrende Aufgaben automatisieren, ohne sie jedes Mal von Hand zu erledigen.
 
 **Windows-Analogie:** Shell-Skripte entsprechen Batch-Dateien (`.bat`) oder PowerShell-Skripten — aber sie sind deutlich mächtiger und auf Linux-Servern allgegenwärtig.
 

@@ -10,7 +10,7 @@
 - `sudo -i`: Starte eine Root-Shell (Vorsicht!).
 - `sudo su -`: Wechsle zum Root-Benutzer.
 - Nur Benutzer in der `sudo`-Gruppe können sudo verwenden.
-- Sudo protokolliert alle Aktionen für die Kontrolle.
+- [Sudo](../glossar.md#sudo-substitute-user-do) protokolliert alle Aktionen für die Kontrolle.
 
 **Beispiel:**
 ```bash
@@ -170,7 +170,7 @@ sudo chmod 644 <file>
 - Keine "versteckten" Admin-Konten—Root ist immer sichtbar.
 
 ## 15. Erweiterte Themen (Optional)
-- ACLs (Access Control Lists): Granularere Berechtigungen.
+- [ACLs](../glossar.md#acl-access-control-list) (Access Control Lists): Granularere Berechtigungen.
 - `getfacl`, `setfacl`: Verwalte ACLs.
 - Sticky Bit, setuid, setgid: Spezielle Berechtigungsbits.
 

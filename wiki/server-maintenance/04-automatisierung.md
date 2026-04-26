@@ -4,7 +4,7 @@
 
 Aufgaben wie Backups, Updates und Log-Bereinigung müssen regelmäßig ausgeführt werden. Wenn du das manuell machst, vergisst du es früher oder später.
 
-**Windows-Analogie:** Die Windows-Aufgabenplanung führt Programme zu bestimmten Zeiten aus. Auf Linux gibt es dafür `cron` (klassisch) und `systemd-Timer` (moderner Ansatz).
+**Windows-Analogie:** Die Windows-Aufgabenplanung führt Programme zu bestimmten Zeiten aus. Auf Linux gibt es dafür [`cron`](../glossar.md#cron--crontab) (klassisch) und [`systemd`](../glossar.md#systemd)-Timer (moderner Ansatz).
 
 **Grundprinzip:**
 ```
@@ -199,7 +199,7 @@ sudo bash -x /usr/local/bin/backup.sh
 ## 4. systemd-Timer als Alternative zu cron
 
 systemd-Timer sind die modernere Alternative zu cron unter Ubuntu. Sie haben einige Vorteile:
-- Ausgabe landet automatisch in journald (kein separates Logging nötig)
+- Ausgabe landet automatisch in [journald](../glossar.md#journald--journalctl) (kein separates Logging nötig)
 - Timing ist robuster (z.B. "5 Minuten nach dem Systemstart")
 - Einfacher zu überwachen und zu debuggen
 

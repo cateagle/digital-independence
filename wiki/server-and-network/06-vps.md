@@ -10,7 +10,7 @@ Bekannte Hypervisoren sind z.B. KVM (häufig bei Linux-Servern), VMware und Micr
 
 ## 2. Was ist ein VPS?
 
-Ein **VPS (Virtual Private Server)** ist eine gemietete virtuelle Maschine bei einem Anbieter. Du bekommst Root-Zugang zu einer VM, die auf einem physischen Server im Rechenzentrum des Anbieters läuft.
+Ein **[VPS](../glossar.md#vps-virtual-private-server) (Virtual Private Server)** ist eine gemietete virtuelle Maschine bei einem Anbieter. Du bekommst Root-Zugang zu einer VM, die auf einem physischen Server im Rechenzentrum des Anbieters läuft.
 
 | | **Shared Hosting** | **VPS** | **Dedicated Server** |
 |---|---|---|---|
@@ -44,7 +44,7 @@ Es gibt viele VPS-Anbieter. Einige der verbreitetsten:
 
 ## 5. Erster Login – typischer Ablauf
 
-Nach der Bestellung erhältst du eine IP-Adresse und entweder ein Root-Passwort oder kannst einen SSH-Key hinterlegen.
+Nach der Bestellung erhältst du eine IP-Adresse und entweder ein Root-Passwort oder kannst einen [SSH-Key](../glossar.md#ssh-key-ssh-schlüsselpaar) hinterlegen.
 
 ```bash
 # Als root einloggen (IP durch deine Server-IP ersetzen)

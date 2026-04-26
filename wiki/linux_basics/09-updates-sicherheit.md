@@ -12,7 +12,7 @@ Software hat Fehler. Manche dieser Fehler sind harmlos, aber manche öffnen Sich
 
 Der typische Ablauf einer Sicherheitslücke:
 1. Jemand entdeckt eine Schwachstelle in einem Programm.
-2. Die Schwachstelle wird als CVE veröffentlicht (dazu gleich mehr).
+2. Die Schwachstelle wird als [CVE](../glossar.md#cve-common-vulnerabilities-and-exposures) veröffentlicht (dazu gleich mehr).
 3. Die Software-Entwickler veröffentlichen ein Update mit einer Korrektur.
 4. Das Update landet in den Ubuntu-Paketquellen.
 5. Du installierst das Update — oder du tust es nicht, und dein Server bleibt verwundbar.
@@ -198,7 +198,7 @@ cat /var/log/unattended-upgrades/unattended-upgrades.log
 
 ## Offene Ports prüfen mit ss -tulnp
 
-Ein Port ist wie eine Tür in dein System. Je weniger Türen offen sind, desto kleiner ist die Angriffsfläche. Mit `ss` kannst du sehen, welche Ports auf deinem Server lauschen.
+Ein [Port](../glossar.md#port) ist wie eine Tür in dein System. Je weniger Türen offen sind, desto kleiner ist die Angriffsfläche. Mit `ss` kannst du sehen, welche Ports auf deinem Server lauschen.
 
 **Windows-Analogie:** Wie `netstat -ano` in der Windows-Eingabeaufforderung, aber moderner und übersichtlicher.
 
@@ -242,7 +242,7 @@ tcp    LISTEN  0       511     127.0.0.1:5432       0.0.0.0:*          users:(("
 ### Was du sehen solltest (und was nicht)
 
 **Erwartete offene Ports auf einem frischen Server:**
-- Port 22 (SSH) — zum Einloggen
+- Port 22 ([SSH](../glossar.md#ssh-secure-shell)) — zum Einloggen
 - Port 80/443 — nur wenn du einen Webserver betreibst
 
 **Warnsignale:**

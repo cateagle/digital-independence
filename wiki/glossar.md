@@ -101,9 +101,15 @@ Siehe auch: [Paketverwaltung](./linux_basics/04-paketverwaltung.md)
 
 Ein Verschlüsselungsverfahren, das zwei unterschiedliche Schlüssel verwendet: einen öffentlichen zum Verschlüsseln und einen privaten zum Entschlüsseln (oder umgekehrt). Ermöglicht sichere Kommunikation ohne vorherigen Austausch eines gemeinsamen Geheimnisses.
 
-Siehe auch: [PGP Cheat Sheet](./tools/pgp.md), [TLS-Exkurs](../kurs/03-filesharing-und-groupware/06-tls-exkurs.md)
+Siehe auch: [PGP Cheat Sheet](./tools/pgp-cheat-sheet.md), [TLS-Exkurs](../kurs/03-filesharing-und-groupware/06-tls-exkurs.md)
 
 ## B
+
+### Base Image
+
+Das Ausgangs-Image, auf dem ein Docker Image aufbaut, angegeben in der `FROM`-Zeile eines Dockerfiles. Gängige Base Images sind `ubuntu`, `debian`, `alpine` oder `scratch`. Alpine-basierte Images sind besonders klein und daher im Self-Hosting beliebt.
+
+Siehe auch: [Docker](./container/docker.md)
 
 ### Bootloader
 
@@ -129,6 +135,18 @@ Siehe auch: [Die Linux Shell](./linux_basics/02-linux-shell.md)
 Ein Sicherheitskonzept, bei dem spezifische IPs, Ports oder Services blockiert werden, während alles andere erlaubt ist. Weniger sicher als eine Allowlist, da neue Bedrohungen nicht automatisch blockiert werden.
 
 Siehe auch: [Firewall & UFW](./server-hardening/01-firewall-ufw.md), [Blacklist](#blacklist)
+
+### Bridge-Netzwerk (Docker)
+
+Das Standard-Netzwerkmodus für Docker-Container, bei dem Docker ein internes virtuelles Netzwerk erstellt. Container im selben Bridge-Netzwerk können sich gegenseitig über ihren Service-Namen ansprechen, sind aber vom Host isoliert.
+
+Siehe auch: [Docker Compose](./container/docker-compose.md)
+
+### Build-Kontext
+
+Der Verzeichnis-Pfad oder der Inhalt, den Docker beim Bauen eines Images an den Docker-Daemon überträgt. Der Build-Kontext enthält alle Dateien, die per `COPY` oder `ADD` in das Image kopiert werden können.
+
+Siehe auch: [Docker Compose](./container/docker-compose.md)
 
 ### Brute-Force-Angriff
 
@@ -194,6 +212,18 @@ Ein DNS-Eintrag, der eine Domain als Alias auf eine andere Domain verweist, stat
 
 Siehe auch: [IP-Adressen, Domains und DNS](./server-and-network/01-ip-domain-dns.md)
 
+### Compose File
+
+Die YAML-Konfigurationsdatei (`docker-compose.yml` oder `compose.yml`) für Docker Compose. Sie beschreibt alle Services, Netzwerke und Volumes einer Anwendung in einem einzigen deklarativen Dokument.
+
+Siehe auch: [Docker Compose](./container/docker-compose.md), [YAML](#yaml-yet-another-markup-language)
+
+### Container Registry
+
+Ein Dienst zum Speichern und Verteilen von Docker Images. Docker Hub ist die bekannteste öffentliche Registry; GitHub Container Registry (ghcr.io) und selbst gehostete Registries wie Harbor sind Alternativen. Nextcloud AIO wird z.B. von `ghcr.io` bezogen.
+
+Siehe auch: [Docker](./container/docker.md)
+
 ### Collabora Online
 
 Ein LibreOffice-basierter Office-Editor, der als Nextcloud-App in den Browser integriert wird. Collabora ermöglicht das Bearbeiten von Textdokumenten, Tabellen und Präsentationen direkt in Nextcloud.
@@ -228,7 +258,7 @@ Siehe auch: [SSL und Let's Encrypt](./server-and-network/04-ssl-letsencrypt.md)
 
 Ein standardisiertes System zur Identifizierung und Dokumentation von Sicherheitslücken in Software (z.B. CVE-2021-44228 für Log4Shell). CVE-Nummern ermöglichen schnelle, eindeutige Kommunikation über bekannte Schwachstellen.
 
-Siehe auch: [Risiken bei der Nutzung von Open Source](../kurs/01-einstieg-open-source/06-risiken-und-abhaengigkeiten.md)
+Siehe auch: [Risiken bei der Nutzung von Open Source](../kurs/01-einstieg-open-source/06-open-source-risiken.md)
 
 ## D
 
@@ -249,6 +279,18 @@ Siehe auch: [Paketverwaltung](./linux_basics/04-paketverwaltung.md)
 Ein Hintergrundprozess auf Linux, der ohne Benutzerinteraktion läuft und kontinuierlich einen Dienst erbringt. Der SSH-Server (`sshd`), Nginx und systemd sind Beispiele für Daemons.
 
 Siehe auch: [Prozesse & Systemüberwachung](./linux_basics/05-prozesse-systemueberwachung.md)
+
+### DDNS (Dynamic DNS)
+
+Ein Dienst, der einen Domainnamen automatisch aktualisiert, wenn sich die IP-Adresse des Servers ändert. Relevant für Self-Hosting zu Hause, wo Internetanbieter dynamische IPs vergeben.
+
+Siehe auch: [IP-Adressen, Domains und DNS](./server-and-network/01-ip-domain-dns.md)
+
+### Datenbank-Migration
+
+Eine versionierte Änderung am Datenbankschema (z.B. neue Tabellen oder Spalten), die automatisch beim Anwendungsupdate ausgeführt wird. Nextcloud führt Migrationen bei Updates automatisch aus; SQLite kann dabei Probleme bereiten.
+
+Siehe auch: [Datenbanken bei Nextcloud](../kurs/03-filesharing-und-groupware/03-datenbanken.md)
 
 ### Data Sovereignty
 *→ Siehe [Datensouveränität](#datensouveränität)*
@@ -401,6 +443,18 @@ Siehe auch: [TLS-Exkurs](../kurs/03-filesharing-und-groupware/06-tls-exkurs.md)
 
 ## E
 
+### Entrypoint
+
+Der Befehl oder das Skript, das als Haupt-Prozess eines Docker-Containers gestartet wird. In Docker Compose kann der Standard-Entrypoint des Images mit `entrypoint:` überschrieben werden.
+
+Siehe auch: [Docker Compose](./container/docker-compose.md)
+
+### Expose (Docker)
+
+Eine Docker-Anweisung (`expose:` in Compose oder `EXPOSE` im Dockerfile), die dokumentiert, auf welchem Port ein Container intern lauscht – ohne den Port nach außen freizugeben. Im Gegensatz zu `ports:` ist `expose:` nur für die Container-zu-Container-Kommunikation im selben Netzwerk gedacht.
+
+Siehe auch: [Docker Compose](./container/docker-compose.md), [Nginx Grundlagen](./components/03-nginx-grundlagen.md)
+
 ### ED25519
 
 Ein modernes Public-Key-Kryptographieverfahren, das als Nachfolger von RSA gilt. Bietet bessere Sicherheit bei kürzeren Schlüsseln und wird von OpenSSH empfohlen (`ssh-keygen -t ed25519`).
@@ -432,6 +486,12 @@ Ein Zertifikat, das zusätzlich zur Domain-Inhaberschaft auch die Existenz der O
 Siehe auch: [TLS-Exkurs](../kurs/03-filesharing-und-groupware/06-tls-exkurs.md)
 
 ## F
+
+### Fulltext Search (Volltextsuche)
+
+Eine Datenbankfunktion, die den Inhalt von Dokumenten oder Textspalten durchsucht, nicht nur exakte Treffer findet. Nextcloud's Suche funktioniert mit SQLite eingeschränkt; PostgreSQL und MariaDB unterstützen echte Volltextsuche.
+
+Siehe auch: [Datenbanken bei Nextcloud](../kurs/03-filesharing-und-groupware/03-datenbanken.md), [PostgreSQL Grundlagen](./components/02-postgresql-grundlagen.md)
 
 ### Fedora
 
@@ -514,7 +574,7 @@ Siehe auch: [Open-Source-Lizenzen](../kurs/01-einstieg-open-source/03-lizenzen.m
 
 Die freie Open-Source-Implementierung von PGP, die auf Linux-Systemen für Verschlüsselung und digitale Signaturen verwendet wird.
 
-Siehe auch: [PGP Cheat Sheet](./tools/pgp.md)
+Siehe auch: [PGP Cheat Sheet](./tools/pgp-cheat-sheet.md)
 
 ### Groupware
 
@@ -578,6 +638,12 @@ Eine Datenstruktur, die die Suche in Datenbanktabellen beschleunigt. Indizes erm
 
 Siehe auch: [Datenbanken Überblick](./components/01-datenbanken-ueberblick.md)
 
+### In-Memory-Speicher
+
+Ein Speichersystem, das Daten ausschließlich im RAM vorhält statt auf der Festplatte. Dadurch sind Zugriffe extrem schnell (unter 1 Millisekunde). Redis ist der bekannteste In-Memory-Speicher im Self-Hosting-Kontext.
+
+Siehe auch: [Redis Grundlagen](./components/04-redis-grundlagen.md)
+
 ### IPv4 (Internet Protocol Version 4)
 
 Die meistgenutzte Version des Internet-Protokolls mit Adressen aus vier Zahlen (0–255), z.B. `192.168.1.10`. IPv4 hat nur ca. 4 Milliarden mögliche Adressen, was durch IPv6 gelöst werden soll.
@@ -618,7 +684,7 @@ Siehe auch: [PostgreSQL Grundlagen](./components/02-postgresql-grundlagen.md)
 
 Der systemd-eigene Logging-Dienst, der Systemlogs strukturiert speichert. Mit `journalctl -u <service>` lassen sich Logs eines bestimmten Dienstes anzeigen.
 
-Siehe auch: [Log-Management](./linux_basics/07-log-management.md)
+Siehe auch: [Log-Management](./linux_basics/07-shell-scripting.md)
 
 ## K
 
@@ -634,12 +700,24 @@ Ein einfaches Speichermodell, das Daten als Paare aus Schlüsseln und Werten org
 
 Siehe auch: [Redis Grundlagen](./components/04-redis-grundlagen.md)
 
+### Kanban-Board
+
+Eine visuelle Methode zur Aufgabenverwaltung, bei der Aufgaben als Karten auf Spalten (z.B. „To Do", „In Progress", „Done") verschoben werden. Nextcloud Deck implementiert ein Kanban-Board ähnlich wie Trello.
+
+Siehe auch: [Nextcloud Apps & Plugins](../kurs/03-filesharing-und-groupware/04-plugins.md)
+
 ### Kubernetes
 *Abkürzung: K8s*
 
 Eine Orchestrierungsplattform für Container-Verwaltung in großem Maßstab. Kubernetes ist deutlich komplexer als Docker Compose und wird erst bei vielen Containern und Hochverfügbarkeits-Anforderungen relevant.
 
 ## L
+
+### LAMP-Stack
+
+Eine klassische Kombination von Serversoftware: Linux, Apache, MySQL/MariaDB und PHP. LAMP ist die Basis für viele PHP-Anwendungen wie WordPress. Im modernen Self-Hosting wird Apache oft durch Nginx ersetzt.
+
+Siehe auch: [Datenbanken Überblick](./components/01-datenbanken-ueberblick.md)
 
 ### Layer (Docker Image)
 
@@ -678,6 +756,18 @@ Eine Software-Version mit verlängertem Sicherheits-Support, meist mehrere Jahre
 Siehe auch: [Linux-Distributionen](../kurs/02-einstieg-linux/02-distributionen.md)
 
 ## M
+
+### Memcache
+
+Ein Caching-Mechanismus für Webanwendungen, der häufig abgerufene Daten im RAM hält. Nextcloud unterstützt verschiedene Memcache-Backends (APCu für lokalen Cache, Redis für verteilten Cache). Redis ist im Self-Hosting die empfohlene Wahl.
+
+Siehe auch: [Redis Grundlagen](./components/04-redis-grundlagen.md)
+
+### Middleware
+
+Software, die zwischen Anfrage und Antwort liegt und übergreifende Aufgaben wie Authentifizierung, Logging oder Rate-Limiting übernimmt. Nginx kann als Middleware vor Anwendungen eingesetzt werden.
+
+Siehe auch: [Nginx Grundlagen](./components/03-nginx-grundlagen.md)
 
 ### Man-in-the-Middle-Angriff (MITM)
 
@@ -743,6 +833,24 @@ Siehe auch: [IP-Adressen, Domains und DNS](./server-and-network/01-ip-domain-dns
 Eine selbst hostbare Collaboration-Plattform mit Dateispeicher, Kalender, Kontakten, Chat und mehr. Nextcloud ist unter AGPL lizenziert und die bekannteste Open-Source-Alternative zu Google Drive.
 
 Siehe auch: [Was ist Nextcloud?](../kurs/03-filesharing-und-groupware/01-nextcloud.md)
+
+### Nextcloud Deck
+
+Eine Kanban-Board-App für Nextcloud zur Aufgabenverwaltung in Teams. Deck funktioniert ähnlich wie Trello und ermöglicht das Anlegen von Boards, Listen und Karten.
+
+Siehe auch: [Nextcloud Apps & Plugins](../kurs/03-filesharing-und-groupware/04-plugins.md)
+
+### Nextcloud Photos
+
+Eine Fotogalerie-App in Nextcloud mit automatischer Sortierung nach Datum und Ort. Nextcloud Photos ist die eingebaute Alternative zu Google Fotos.
+
+Siehe auch: [Was ist Nextcloud?](../kurs/03-filesharing-und-groupware/01-nextcloud.md)
+
+### Nextcloud Talk
+
+Eine integrierte Chat- und Videokonferenz-App in Nextcloud. Talk ist die selbst hostbare Alternative zu Microsoft Teams oder Google Meet und unterstützt verschlüsselte Sprach- und Videoanrufe.
+
+Siehe auch: [Nextcloud Apps & Plugins](../kurs/03-filesharing-und-groupware/04-plugins.md)
 
 ### Nextcloud AIO (All-in-One)
 
@@ -847,7 +955,7 @@ Siehe auch: [Prozesse & Systemüberwachung](./linux_basics/05-prozesse-systemueb
 
 Ein Passwort für einen privaten Schlüssel (bei SSH oder GPG). Schützt den Schlüssel zusätzlich, falls jemand Zugang zur Schlüsseldatei bekommt.
 
-Siehe auch: [SSH](./server-and-network/03-ssh.md), [PGP Cheat Sheet](./tools/pgp.md)
+Siehe auch: [SSH](./server-and-network/03-ssh.md), [PGP Cheat Sheet](./tools/pgp-cheat-sheet.md)
 
 ### Permissive License (Permissive Lizenz)
 
@@ -859,7 +967,13 @@ Siehe auch: [Open-Source-Lizenzen](../kurs/01-einstieg-open-source/03-lizenzen.m
 
 Ein System zur Verschlüsselung und digitalen Signierung von Daten und Nachrichten. GPG ist die freie Open-Source-Implementierung davon.
 
-Siehe auch: [PGP Cheat Sheet](./tools/pgp.md)
+Siehe auch: [PGP Cheat Sheet](./tools/pgp-cheat-sheet.md)
+
+### pgAdmin
+
+Eine webbasierte Administrationsoberfläche für PostgreSQL. pgAdmin ermöglicht die Verwaltung von Datenbanken, Tabellen und Abfragen über ein grafisches Interface anstelle der Kommandozeile.
+
+Siehe auch: [Datenbanken bei Nextcloud](../kurs/03-filesharing-und-groupware/03-datenbanken.md)
 
 ### pg_dump
 
@@ -878,6 +992,12 @@ Siehe auch: [TLS-Exkurs](../kurs/03-filesharing-und-groupware/06-tls-exkurs.md)
 Ein nummerierter „Kanal" auf einem Host, über den verschiedene Netzwerkdienste gleichzeitig laufen können. Ports sind Zahlen von 0 bis 65535; bekannte Standardports sind z.B. 22 (SSH), 80 (HTTP), 443 (HTTPS).
 
 Siehe auch: [Hosts, Ports und Protokolle](./server-and-network/02-host-port-protokolle.md)
+
+### Port Mapping
+
+Die Zuordnung eines Ports auf dem Host zu einem Port im Docker-Container (`host:container`). Port Mapping macht Dienste von außen erreichbar und wird in Docker Compose mit `ports:` konfiguriert.
+
+Siehe auch: [Docker Compose](./container/docker-compose.md)
 
 ### PostgreSQL
 *Kurzform: Postgres*
@@ -916,6 +1036,12 @@ Siehe auch: [SSH](./server-and-network/03-ssh.md), [TLS-Exkurs](../kurs/03-files
 Forderung, dass mit öffentlichen Mitteln entwickelte Software auch als Open Source veröffentlicht werden soll. 2025 vom Europäischen Parlament unterstützt.
 
 Siehe auch: [Digitale Unabhängigkeit](../kurs/01-einstieg-open-source/01-digital-independence.md)
+
+### Pub/Sub (Publish/Subscribe)
+
+Ein Messaging-Muster, bei dem Sender (Publisher) Nachrichten an Kanäle schicken und Empfänger (Subscriber) diese Kanäle abonnieren. Redis unterstützt Pub/Sub nativ und wird z.B. von Mastodon für Echtzeit-Benachrichtigungen eingesetzt.
+
+Siehe auch: [Redis Grundlagen](./components/04-redis-grundlagen.md)
 
 ### Pull Request (PR)
 *GitLab: Merge Request*
@@ -972,6 +1098,12 @@ Ein In-Memory Key-Value-Speicher, der für Caching, Sessions, Queues und Pub/Sub
 
 Siehe auch: [Redis Grundlagen](./components/04-redis-grundlagen.md)
 
+### Rate Limiting
+
+Ein Mechanismus, der die Anzahl von Anfragen eines Clients in einem Zeitraum begrenzt. Schützt vor Brute-Force-Angriffen und übermäßiger Last. Redis wird häufig für Rate-Limiting verwendet, da atomare Zähler-Operationen extrem schnell sind.
+
+Siehe auch: [Redis Grundlagen](./components/04-redis-grundlagen.md)
+
 ### Replikation (Datenbank)
 
 Das Kopieren von Datenbankänderungen auf ein sekundäres System für Hochverfügbarkeit und Lastverteilung. Wird für Produktionssysteme empfohlen, aber nicht für einfaches Self-Hosting benötigt.
@@ -994,13 +1126,13 @@ Siehe auch: [Reverse Proxy](./server-and-network/05-reverse-proxy.md), [Nginx Gr
 
 Die Anmeldung als `root`-Superuser, oft per SSH. Eine Sicherheitslücke, da `root` auf jedem System existiert und Angreifer den Benutzernamen kennen. Sollte per SSH deaktiviert werden.
 
-Siehe auch: [Root-Login deaktivieren](./server-hardening/03-root-login-deaktivieren.md)
+Siehe auch: [Root-Login deaktivieren](./server-hardening/03-root-login-verhindern.md)
 
 ### RSA
 
 Ein verbreitetes Public-Key-Kryptographieverfahren. Noch sicher, aber ED25519 ist moderner, effizienter und für neue SSH-Keys empfohlen.
 
-Siehe auch: [SSH](./server-and-network/03-ssh.md), [PGP Cheat Sheet](./tools/pgp.md)
+Siehe auch: [SSH](./server-and-network/03-ssh.md), [PGP Cheat Sheet](./tools/pgp-cheat-sheet.md)
 
 ## S
 
@@ -1021,6 +1153,12 @@ Siehe auch: [Paketverwaltung](./linux_basics/04-paketverwaltung.md)
 Die drei Standarddatenströme jedes Linux-Prozesses: stdin (Standardeingabe, 0), stdout (Standardausgabe, 1) und stderr (Fehlerausgabe, 2). Mit Umleitungsoperatoren (`>`, `>>`, `2>&1`) kann man diese Ströme in Dateien oder andere Programme leiten.
 
 Siehe auch: [Die Linux Shell](./linux_basics/02-linux-shell.md)
+
+### S3 (Simple Storage Service)
+
+Ein von Amazon Web Services eingeführtes objektbasiertes Speicherprotokoll. Nextcloud kann S3-kompatible Speicher als externes Storage-Backend einbinden. Viele selbst hostbare Dienste wie MinIO bieten eine S3-kompatible API.
+
+Siehe auch: [Nextcloud Apps & Plugins](../kurs/03-filesharing-und-groupware/04-plugins.md)
 
 ### SaaS (Software as a Service)
 
@@ -1121,7 +1259,7 @@ Siehe auch: [Benutzer, Gruppen und Berechtigungen](./linux_basics/03-users-group
 
 Ein Angriff auf eine Abhängigkeit oder einen Zulieferer statt auf das Zielprodukt direkt. Beispiele: die XZ-Utils-Backdoor 2024 oder das kompromittierte npm-Paket event-stream.
 
-Siehe auch: [Risiken bei der Nutzung von Open Source](../kurs/01-einstieg-open-source/06-risiken-und-abhaengigkeiten.md)
+Siehe auch: [Risiken bei der Nutzung von Open Source](../kurs/01-einstieg-open-source/06-open-source-risiken.md)
 
 ### systemd
 
@@ -1187,11 +1325,11 @@ Siehe auch: [IP-Adressen, Domains und DNS](./server-and-network/01-ip-domain-dns
 
 ## U
 
-### User (Linux-Benutzer)
+### UID/GID (User ID / Group ID)
 
-Ein Benutzerkonto auf einem Linux-System, unter dem Prozesse und Dienste mit eingeschränkten Berechtigungen laufen. Jede Person und jeder Dienst (z.B. `www-data` für Webserver) erhält ein eigenes Konto; nur `root` hat uneingeschränkte Rechte.
+Numerische Kennungen für Benutzer und Gruppen unter Linux. Docker-Container laufen standardmäßig als Root (UID 0); für sicherere Setups sollte die `user:`-Option in Docker Compose genutzt werden, damit Datei-Berechtigungen zwischen Host und Container übereinstimmen.
 
-Siehe auch: [Benutzer, Gruppen und Berechtigungen](./linux_basics/03-users-groups-permissions.md)
+Siehe auch: [Docker Compose](./container/docker-compose.md), [Benutzer, Gruppen und Berechtigungen](./linux_basics/03-users-groups-permissions.md)
 
 ### Ubuntu
 
@@ -1222,6 +1360,12 @@ Siehe auch: [Was ist Linux?](../kurs/02-einstieg-linux/01-was-ist-linux.md)
 (1) Im Open-Source-Kontext: das originale Projekt, von dem ein Fork stammt. (2) Im Reverse-Proxy-Kontext: der interne Backend-Server, an den der Proxy Anfragen weiterleitet.
 
 Siehe auch: [Communities & Warum Open Source nutzen?](../kurs/01-einstieg-open-source/05-communities-und-gruende.md)
+
+### User (Linux-Benutzer)
+
+Ein Benutzerkonto auf einem Linux-System, unter dem Prozesse und Dienste mit eingeschränkten Berechtigungen laufen. Jede Person und jeder Dienst (z.B. `www-data` für Webserver) erhält ein eigenes Konto; nur `root` hat uneingeschränkte Rechte.
+
+Siehe auch: [Benutzer, Gruppen und Berechtigungen](./linux_basics/03-users-groups-permissions.md)
 
 ## V
 
@@ -1257,6 +1401,12 @@ Eine gemietete virtuelle Maschine mit eigenem Betriebssystem und Root-Zugang. Ei
 Siehe auch: [VPS und Virtualisierung](./server-and-network/06-vps.md)
 
 ## W
+
+### Webroot
+
+Das Verzeichnis im Dateisystem, aus dem ein Webserver statische Dateien ausliefert. In Nginx-Konfigurationen wird es mit `root` angegeben. Auch der Ablageort für ACME-Challenge-Dateien bei Let's Encrypt-Zertifikaten.
+
+Siehe auch: [Nginx Grundlagen](./components/03-nginx-grundlagen.md)
 
 ### WebSocket
 

@@ -2,13 +2,13 @@
 
 ## 1. Warum brauche ich eine Datenbank?
 
-Jede Anwendung, die Daten dauerhaft speichern muss, braucht eine Datenbank. Beim Self-Hosting wählst du die Datenbank selbst und die Wahl hängt vom Anwendungsfall ab, nicht von Gewohnheit.
+Jede Anwendung, die Daten dauerhaft speichern muss, braucht eine Datenbank. Beim [Self-Hosting](../glossar.md#self-hosting) wählst du die Datenbank selbst und die Wahl hängt vom Anwendungsfall ab, nicht von Gewohnheit.
 
 Die vier häufigsten Kandidaten beim Self-Hosting:
-- **PostgreSQL**: robuste, vollwertige relationale Datenbank
-- **MariaDB / MySQL**: weit verbreitet, gut unterstützt
-- **SQLite**: einfach, dateibasiert, kein Server nötig
-- **Redis**: In-Memory-Speicher für schnelle Zugriffe
+- **[PostgreSQL](../glossar.md#postgresql)**: robuste, vollwertige relationale Datenbank
+- **[MariaDB](../glossar.md#mariadb) / [MySQL](../glossar.md#mysql)**: weit verbreitet, gut unterstützt
+- **[SQLite](../glossar.md#sqlite)**: einfach, dateibasiert, kein Server nötig
+- **[Redis](../glossar.md#redis)**: In-Memory-Speicher für schnelle Zugriffe
 
 ## 2. Schnell-Entscheidungshilfe
 
@@ -40,7 +40,7 @@ PostgreSQL ist die sichere Standardwahl für die meisten Self-Hosting-Projekte.
 
 ## 4. MariaDB - Wann verwenden?
 
-MariaDB ist ein Fork von MySQL und zu großen Teilen kompatibel. Wenn eine App "MySQL" verlangt, funktioniert MariaDB meist genauso.
+MariaDB ist ein [Fork](../glossar.md#fork) von MySQL und zu großen Teilen kompatibel. Wenn eine App "MySQL" verlangt, funktioniert MariaDB meist genauso.
 
 **Verwende MariaDB wenn:**
 - Die App-Dokumentation MySQL/MariaDB vorschreibt
@@ -68,7 +68,7 @@ SQLite speichert die gesamte Datenbank in einer einzigen Datei. Kein Datenbankse
 - Die Datenbank über das Netzwerk erreichbar sein soll
 
 **Beispiele aus der Praxis:**
-- Vaultwarden (Bitwarden-kompatibles Password-Manager-Backend)
+- [Vaultwarden](../glossar.md#vaultwarden) (Bitwarden-kompatibles Password-Manager-Backend)
 - Kleine Monitoring-Tools
 - Heimautomatisierung (z.B. Home Assistant)
 
@@ -79,13 +79,13 @@ Redis ist keine klassische Datenbank, sondern ein In-Memory-Speicher. Daten lieg
 **Verwende Redis wenn:**
 - Du einen Cache brauchst (z.B. Ergebnisse von DB-Abfragen zwischenspeichern)
 - Sessions für eine Webanwendung gespeichert werden sollen
-- Du eine Message Queue oder einen Pub/Sub-Mechanismus brauchst
+- Du eine Message Queue oder einen [Pub/Sub](../glossar.md#pubsub-publishsubscribe)-Mechanismus brauchst
 - Daten nur kurzfristig gespeichert werden müssen
 
 **Redis ist kein Ersatz für PostgreSQL oder MariaDB**. Es wird meist als Ergänzung daneben betrieben.
 
 **Beispiele aus der Praxis:**
-- Mastodon (Cache und Sidekiq-Queues)
+- [Mastodon](../glossar.md#mastodon) (Cache und Sidekiq-Queues)
 - Nextcloud (Session-Cache)
 - Gitea (Cache)
 
@@ -107,7 +107,7 @@ Ideal für Tools mit geringem Traffic oder Einzelpersonennutzung.
 WordPress/PHP-App → MariaDB
 ```
 
-Der klassische LAMP-Stack.
+Der klassische [LAMP-Stack](../glossar.md#lamp-stack).
 
 ## 8. Faustregel für Einsteiger
 

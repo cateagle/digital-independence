@@ -2,7 +2,7 @@
 
 ## Warum AIO und nicht das "normale" Docker Image?
 
-Es gibt zwei gängige Wege, Nextcloud mit Docker zu betreiben:
+Es gibt zwei gängige Wege, Nextcloud mit [Docker](../../wiki/glossar.md#docker) zu betreiben:
 
 ### Option A: Nextcloud + einzelne Abhängigkeiten selbst zusammenstellen
 ```yaml
@@ -15,19 +15,19 @@ services:
   redis:
     image: redis:latest
 ```
-Das ist flexibel, aber du konfigurierst alles selbst: Datenbank, Redis, Cronjobs, Office-Integration, Backups. Damit kannst du tendenziell mehr User verwalten, aber du musst dich deutlich mehr mit der Technologie auseinandersetzen. Nichts davon funktioniert "out of the box" richtig.
+Das ist flexibel, aber du konfigurierst alles selbst: Datenbank, [Redis](../../wiki/glossar.md#redis), Cronjobs, Office-Integration, Backups. Damit kannst du tendenziell mehr User verwalten, aber du musst dich deutlich mehr mit der Technologie auseinandersetzen. Nichts davon funktioniert "out of the box" richtig.
 
 ### Option B: Nextcloud All-in-One (AIO)
 
-AIO ist ein offiziell von Nextcloud entwickeltes "Mastercontainer"-Image,
+[AIO](../../wiki/glossar.md#aio-all-in-one) ist ein offiziell von Nextcloud entwickeltes "Mastercontainer"-Image,
 das alle notwendigen Komponenten selbst verwaltet und konfiguriert:
 - Nextcloud (PHP-App)
-- PostgreSQL oder MariaDB (je nach Konfiguration)
+- [PostgreSQL](../../wiki/glossar.md#postgresql) oder [MariaDB](../../wiki/glossar.md#mariadb) (je nach Konfiguration)
 - Redis (Cache)
-- Collabora Online (Office-Integration, optional)
-- Nextcloud Talk (Videokonferenzen, optional)
+- [Collabora Online](../../wiki/glossar.md#collabora-online) (Office-Integration, optional)
+- [Nextcloud Talk](../../wiki/glossar.md#nextcloud-talk) (Videokonferenzen, optional)
 - Backup-Mechanismus (optional)
-- Nginx als Reverse Proxy
+- Nginx als [Reverse Proxy](../../wiki/glossar.md#reverse-proxy)
 
 Wenn du nicht 100+ User gleichzeitig darauf arbeiten lassen willst, solltest du immer zuerst AIO ausprobieren. Wenn es von der Leistung nicht ausreicht, dann kannst du immer noch die kompliziertere Variante ausprobieren. Es reduziert den operativen Aufwand drastisch und die Komponenten sind aufeinander abgestimmt sind. Wenn du einen Bug hast, dann bist du nicht der einzige. Tausende andere verwenden die exakt gleiche Konfiguration und irgendeiner davon wird das Problem schon gelöst haben.
 
@@ -110,7 +110,7 @@ Was hier konfiguriert ist:
 - `restart: unless-stopped` – Container startet nach VM-Neustart automatisch
 - `ports: 8080:8080` – AIO-Admin-UI auf Port 8080 im Container erreichbar
 - `APACHE_PORT: 11000` – Nextcloud selbst lauscht intern auf Port 11000 (nicht direkt exposed)
-- `APACHE_IP_BINDING: 127.0.0.1` – Nextcloud nur lokal erreichbar; ein Reverse Proxy kümmert sich um HTTPS
+- `APACHE_IP_BINDING: 127.0.0.1` – Nextcloud nur lokal erreichbar; ein Reverse Proxy kümmert sich um [HTTPS](../../wiki/glossar.md#https-hypertext-transfer-protocol-secure)
 - `/var/run/docker.sock` – AIO braucht Zugriff auf den Docker-Daemon, um selbst Container zu starten
 
 > **Bind Mount vs. Docker Volume:**
@@ -161,13 +161,13 @@ es ist der einzige Zugang zur AIO-Administrationsoberfläche.
 
 ## Schritt 4: Nextcloud-Domain konfigurieren
 
-AIO fragt nach einer Domain. Da wir lokal in einer VM arbeiten und kein echtes TLS-Zertifikat bekommen können, nutzen wir eine lokale IP `localhost`/`127.0.0.1` (localhost ist ein Alias für 127.0.0.1 und leitet zurück an das interne Netzwerk). 
+AIO fragt nach einer Domain. Da wir lokal in einer VM arbeiten und kein echtes [TLS](../../wiki/glossar.md#tls-transport-layer-security)-Zertifikat bekommen können, nutzen wir eine lokale IP `localhost`/`127.0.0.1` (localhost ist ein Alias für 127.0.0.1 und leitet zurück an das interne Netzwerk). 
 
 
 > **Warum fragt AIO nach einer Domain?**
 > Nextcloud ist für HTTPS-Betrieb mit einer echten Domain ausgelegt.
 > Im Produktionsbetrieb würdest du hier `cloud.meinedomain.de` eintragen
-> und Let's Encrypt übernimmt automatisch das TLS-Zertifikat.
+> und [Let's Encrypt](../../wiki/glossar.md#lets-encrypt) übernimmt automatisch das TLS-Zertifikat.
 > Für unsere VM akzeptieren wir die Unsicherheitswarnung des Browsers.
 
 ---

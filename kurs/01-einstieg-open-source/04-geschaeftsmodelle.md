@@ -26,7 +26,7 @@ sie können jeglichen flankierenden Service kommerzialisieren.
 
 **Wie es funktioniert:**
 - Kern-Software ist frei verfügbar (Community Edition)
-- Unternehmen zahlen für SLAs, garantierte Antwortzeiten, zertifizierten Support,
+- Unternehmen zahlen für [SLAs](../../wiki/glossar.md#sla-service-level-agreement), garantierte Antwortzeiten, zertifizierten Support,
   Sicherheits-Backports und Compliance-Dokumentation
 - Auch Wartung, Hosting, kundenspezifische Entwicklung, Beratung und Schulung
   können kostenpflichtig angeboten werden
@@ -97,7 +97,7 @@ Self-hosted                      Premium-Support
 | Confluent | Apache Kafka | Confluent Platform |
 | Grafana Labs | Grafana OSS | Grafana Cloud, Enterprise-Plugins |
 
-**Kritik am Open-Core-Modell:** Manche Community-Mitglieder empfinden es als unfair,
+**Kritik am [Open-Core](../../wiki/glossar.md#open-core)-Modell:** Manche Community-Mitglieder empfinden es als unfair,
 wenn die "besten" Features hinter einer Paywall verschwinden. Wichtig ist eine sorgfältige
 Abwägung: Der Open-Source-Kern muss auch ohne die proprietären Features einen echten
 Mehrwert für die Community bieten.
@@ -159,7 +159,7 @@ ist, aber langfristig zum "selbstverständlichen Allgemeingut" werden könnte.
 ## Geschäftsmodell 6: Dual Licensing
 
 Die gleiche Software wird unter zwei Lizenzen angeboten:
-- **Open Source** für Community/private Nutzung (z.B. GPL)
+- **Open Source** für Community/private Nutzung (z.B. [GPL](../../wiki/glossar.md#gpl-gnu-general-public-license))
 - **Kommerzielle Lizenz** für Unternehmen, die die GPL-Bedingungen nicht erfüllen können
 
 **Warum das funktioniert:**
@@ -201,14 +201,14 @@ viel vom Kuchen abbekamen:
 
 | Unternehmen | Produkt | Vorher | Nachher | Reaktion |
 |---|---|---|---|---|
-| Elastic | Elasticsearch | Apache 2.0 | SSPL / Elastic License | AWS forkt zu OpenSearch |
+| Elastic | Elasticsearch | Apache 2.0 | [SSPL](../../wiki/glossar.md#sspl-server-side-public-license) / Elastic License | AWS forkt zu OpenSearch |
 | HashiCorp | Terraform, Vault | MPL 2.0 | BSL 1.1 | Community forkt zu OpenTofu |
 | MongoDB | MongoDB | AGPL | SSPL | Distros entfernen Paket |
 | Redis Labs | Redis-Module | Apache 2.0 | RSALv2 | AWS/Google forken |
 
 **Was ist SSPL?**
 Die *Server Side Public License* (von MongoDB entwickelt) ist technisch kein
-"echter" Open-Source-Standard nach OSI-Definition – obwohl der Code öffentlich ist.
+"echter" Open-Source-Standard nach [OSI](../../wiki/glossar.md#osi-open-source-initiative)-Definition – obwohl der Code öffentlich ist.
 Sie verlangt, dass alle Dienste, die auf der Software basieren, ebenfalls unter SSPL
 veröffentlicht werden – also praktisch unmöglich für Cloud-Anbieter.
 
@@ -244,4 +244,4 @@ aber ihre Interessen decken sich oft mit deinen.
 
 ## Weiter geht es
 
-→ [Communities & Gründe](04-communities-und-gruende.md)
+→ [Communities & Gründe](05-communities-und-gruende.md)

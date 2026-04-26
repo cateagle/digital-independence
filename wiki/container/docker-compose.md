@@ -2,7 +2,7 @@
 
 ## Was ist Docker Compose?
 
-Docker Compose ist ein Werkzeug zum Definieren und Ausführen von Multi-Container-Docker-Anwendungen. Du verwendest eine YAML-Datei, um die Dienste, Netzwerke und Volumes deiner Anwendung zu konfigurieren, und startest dann alles mit einem einzigen Befehl.
+[Docker Compose](../glossar.md#docker-compose) ist ein Werkzeug zum Definieren und Ausführen von Multi-Container-Docker-Anwendungen. Du verwendest eine [YAML](../glossar.md#yaml-yet-another-markup-language)-Datei, um die Dienste, Netzwerke und Volumes deiner Anwendung zu konfigurieren, und startest dann alles mit einem einzigen Befehl.
 
 ---
 
@@ -52,18 +52,18 @@ volumes:
 ## Häufige Dienstoptionen
 
 - **image:** Name des zu verwendenden Images (z.B. `nginx:latest`).
-- **build:** Build-Kontext oder Objekt (z.B. `build: .` oder `build: { context: ./app, dockerfile: Dockerfile.dev }`).
+- **build:** [Build-Kontext](../glossar.md#build-kontext) oder Objekt (z.B. `build: .` oder `build: { context: ./app, dockerfile: Dockerfile.dev }`).
 - **command:** Standard-Befehl überschreiben.
-- **environment:** Umgebungsvariablen setzen (Liste oder Dictionary).
+- **environment:** [Umgebungsvariablen](../glossar.md#environment-variable-umgebungsvariable) setzen (Liste oder Dictionary).
 - **env_file:** Umgebungsvariablen aus Datei(en) laden.
 - **ports:** Host:Container-Ports zuordnen (z.B. `- "8080:80"`).
-- **volumes:** Host-Pfade oder benannte Volumes einbinden.
+- **volumes:** Host-Pfade oder benannte [Volumes](../glossar.md#volume-docker) einbinden.
 - **depends_on:** Startreihenfolge der Dienste festlegen.
 - **restart:** Neustart-Richtlinie (`no`, `always`, `on-failure`, `unless-stopped`).
 - **networks:** An benutzerdefinierte Netzwerke anhängen.
 - **user:** Als bestimmten Benutzer/Gruppe ausführen.
 - **entrypoint:** Standard-Entrypoint überschreiben.
-- **healthcheck:** Gesundheitsprüfungen konfigurieren.
+- **healthcheck:** [Gesundheitsprüfungen](../glossar.md#health-check-gesundheitsprüfung) konfigurieren.
 - **logging:** Logging-Treiber und Optionen konfigurieren.
 
 ---
@@ -146,7 +146,7 @@ services:
 
 ### 5. Dateiberechtigungsprobleme zwischen Host und Container
 **Problem:** Eingebundene Dateien/Ordner sind wegen Benutzer-Mismatch nicht erreichbar.
-**Lösung:** Option `user:` im Dienst setzen oder Berechtigungen auf dem Host anpassen. Kompatible UID/GID verwenden.
+**Lösung:** Option `user:` im Dienst setzen oder Berechtigungen auf dem Host anpassen. Kompatible [UID/GID](../glossar.md#uidgid-user-id--group-id) verwenden.
 
 ### 6. Syntaxfehler in der Compose-Datei
 **Problem:** YAML ist leerzeichen-sensitiv; Tabs oder falsche Einrückungen führen zu Fehlern.

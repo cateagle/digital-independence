@@ -8,7 +8,7 @@ Updates schließen Sicherheitslücken, beheben Fehler und bringen neue Funktione
 
 ## 2. System-Updates mit apt
 
-`apt` ist der Paketmanager von Ubuntu – vergleichbar mit dem App Store, aber für Systempakete.
+[`apt`](../glossar.md#apt-advanced-package-tool) ist der Paketmanager von Ubuntu – vergleichbar mit dem App Store, aber für Systempakete.
 
 **Schritt 1: Paketlisten aktualisieren (Infos über verfügbare Updates holen):**
 ```bash
@@ -68,14 +68,14 @@ PostgreSQL 15.4.2
 
 ## 4. Docker-Image-Updates
 
-Docker-Container laufen auf Basis von Images. Wenn ein neues Image verfügbar ist (z.B. wegen einer Sicherheitslücke in der Anwendung), musst du das Image aktualisieren.
+[Docker](../glossar.md#docker)-Container laufen auf Basis von Images. Wenn ein neues Image verfügbar ist (z.B. wegen einer Sicherheitslücke in der Anwendung), musst du das Image aktualisieren.
 
 **Aktuelles Image herunterladen:**
 ```bash
 docker pull nginx:latest
 ```
 
-**Mit Docker Compose aktualisieren (empfohlener Weg):**
+**Mit [Docker Compose](../glossar.md#docker-compose) aktualisieren (empfohlener Weg):**
 ```bash
 # Im Verzeichnis mit der docker-compose.yml
 docker compose pull          # Neue Images herunterladen
@@ -234,7 +234,7 @@ cat /var/log/unattended-upgrades/unattended-upgrades.log
 
 ## 9. Ubuntu-Version-Upgrade (LTS → LTS)
 
-Ubuntu LTS-Versionen werden 5 Jahre unterstützt. Irgendwann musst du von einer LTS-Version zur nächsten wechseln (z.B. 22.04 → 24.04).
+Ubuntu [LTS](../glossar.md#lts-long-term-support)-Versionen werden 5 Jahre unterstützt. Irgendwann musst du von einer LTS-Version zur nächsten wechseln (z.B. 22.04 → 24.04).
 
 **Voraussetzungen:**
 ```bash

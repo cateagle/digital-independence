@@ -2,12 +2,12 @@
 
 ## 1. Was ist Nginx?
 
-Nginx (ausgesprochen: "Engine-X") ist ein Webserver und Reverse Proxy. Beim Self-Hosting übernimmt Nginx meist zwei Aufgaben:
+Nginx (ausgesprochen: "Engine-X") ist ein [Webserver](../glossar.md#webserver) und [Reverse Proxy](../glossar.md#reverse-proxy). Beim [Self-Hosting](../glossar.md#self-hosting) übernimmt Nginx meist zwei Aufgaben:
 
 1. **Statische Dateien ausliefern** - HTML, CSS, JS, Bilder direkt an den Browser schicken
-2. **Reverse Proxy** - Anfragen von außen entgegennehmen und an einen anderen Container (z.B. auf Port 3000) weiterleiten
+2. **Reverse Proxy** - Anfragen von außen entgegennehmen und an einen anderen [Container](../glossar.md#container) (z.B. auf [Port](../glossar.md#port) 3000) weiterleiten
 
-Nginx ist der erste Anlaufpunkt für alle Anfragen von außen. Es kümmert sich auch um HTTPS/SSL.
+Nginx ist der erste Anlaufpunkt für alle Anfragen von außen. Es kümmert sich auch um [HTTPS](../glossar.md#https-hypertext-transfer-protocol-secure)/SSL.
 
 ## 2. Nginx als Docker Container starten
 
@@ -196,7 +196,7 @@ Beide Services sind automatisch im selben Standard-Netzwerk und können sich geg
 
 ## 7. SSL mit Let's Encrypt (certbot)
 
-Let's Encrypt bietet kostenlose SSL-Zertifikate. Mit Docker wird certbot als separater Container ausgeführt.
+[Let's Encrypt](../glossar.md#lets-encrypt) bietet kostenlose SSL-Zertifikate. Mit Docker wird [Certbot](../glossar.md#certbot) als separater Container ausgeführt.
 
 **Docker Compose mit certbot:**
 ```yaml

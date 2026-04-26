@@ -4,7 +4,7 @@
 
 Der `root`-Benutzer existiert auf **jedem** Linux-System und hat **uneingeschränkte** Macht über den Server. Angreifer wissen das und versuchen sich genau mit diesem Benutzernamen einzuloggen.
 
-Wenn Root-Login per SSH erlaubt ist, haben Angreifer es leichter:
+Wenn [Root-Login](../glossar.md#root-login) per [SSH](../glossar.md#ssh-secure-shell) erlaubt ist, haben Angreifer es leichter:
 - Der Benutzername ist bekannt: `root`
 - Sie müssen nur noch das Passwort erraten
 - Bei Erfolg haben sie sofort vollen Zugriff – kein weiterer Schritt nötig
@@ -66,7 +66,7 @@ sudo systemctl restart ssh
 
 ## 4. Passwort-Authentifizierung deaktivieren (nur SSH-Keys)
 
-Passwörter können erraten oder durch Brute-Force geknackt werden. SSH-Keys sind deutlich sicherer: Sie bestehen aus einem mathematischen Schlüsselpaar, das praktisch nicht zu erraten ist.
+Passwörter können erraten oder durch Brute-Force geknackt werden. [SSH-Keys](../glossar.md#ssh-key-ssh-schlüsselpaar) sind deutlich sicherer: Sie bestehen aus einem mathematischen Schlüsselpaar, das praktisch nicht zu erraten ist.
 
 **Windows-Analogie:** Ein SSH-Key ist wie ein physischer Türschlüssel – man braucht das Original, ein Passwort ist wie ein PIN, den man theoretisch erraten kann.
 
@@ -78,7 +78,7 @@ Führe diesen Befehl auf deinem **lokalen Computer** aus (nicht auf dem Server):
 ssh-keygen -t ed25519 -C "mein-server-key"
 ```
 
-Du wirst nach einem Speicherort gefragt (Standard ist `~/.ssh/id_ed25519`) und optional nach einer Passphrase (empfohlen!).
+Du wirst nach einem Speicherort gefragt (Standard ist `~/.ssh/id_ed25519`) und optional nach einer [Passphrase](../glossar.md#passphrase) (empfohlen!).
 
 Zwei Dateien werden erstellt:
 - `~/.ssh/id_ed25519` – der **private** Schlüssel (niemals teilen!)

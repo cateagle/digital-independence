@@ -1,18 +1,18 @@
 # Risiken bei der Nutzung von Open Source
 
-Open Source bietet enorme Vorteile: Transparenz, Kontrolle, keine Vendor-Lock-in-Fallen. Aber wer Open-Source-Software einsetzt, sollte auch die Risiken kennen. Diese sind real, und sie werden oft unterschätzt.
+Open Source bietet enorme Vorteile: Transparenz, Kontrolle, keine [Vendor-Lock-in](../../wiki/glossar.md#lock-in--vendor-lock-in)-Fallen. Aber wer Open-Source-Software einsetzt, sollte auch die Risiken kennen. Diese sind real, und sie werden oft unterschätzt.
 
 ---
 
 ## 1. Die Illusion der Sicherheit durch offenen Code
 
-Open Source bedeutet, dass der Quellcode öffentlich einsehbar ist. Das klingt nach einem großen Sicherheitsvorteil und das ist es grundsätzlich auch da die Hoffnung besteht, dass die Community Fehler schnell findet. In der Praxis stimmt das allerdings nur für populäre Projekte. Mehr als 99% der Projekte sind nicht populär.
+Open Source bedeutet, dass der [Quellcode](../../wiki/glossar.md#quellcode-source-code) öffentlich einsehbar ist. Das klingt nach einem großen Sicherheitsvorteil und das ist es grundsätzlich auch da die Hoffnung besteht, dass die Community Fehler schnell findet. In der Praxis stimmt das allerdings nur für populäre Projekte. Mehr als 99% der Projekte sind nicht populär.
 
 Weniger bekannte Bibliotheken können jahrelang schwerwiegende Sicherheitslücken enthalten, ohne dass jemand hinschaut. Selbst bei großen Projekten gibt es Ausnahmen:
 
 | Schwachstelle                     | Projekt    | Zeit bis zur Entdeckung |
 |-----------------------------------|------------|-------------------------|
-| Heartbleed (CVE-2014-0160)        | OpenSSL    | ~2 Jahre im Einsatz     |
+| Heartbleed ([CVE](../../wiki/glossar.md#cve-common-vulnerabilities-and-exposures)-2014-0160)        | OpenSSL    | ~2 Jahre im Einsatz     |
 | Log4Shell (CVE-2021-44228)        | Log4j      | ~8 Jahre im Einsatz     |
 | XZ Utils Backdoor (CVE-2024-3094) | xz/liblzma | ~2 Jahre eingeschleust  |
 
@@ -129,7 +129,7 @@ Das bedeutet: Software, die du heute frei nutzen kannst, könnte morgen nicht me
 
 ### Copyleft-Falle
 
-Wer GPL-Software in eigene Produkte integriert und diese weitergibt, muss das Produkt ebenfalls unter GPL veröffentlichen. Das ist von der Philosophie her gewollt, kann aber für Unternehmen oder Projekte, die proprietären Code schützen wollen, eine Falle sein.
+Wer [GPL](../../wiki/glossar.md#gpl-gnu-general-public-license)-Software in eigene Produkte integriert und diese weitergibt, muss das Produkt ebenfalls unter GPL veröffentlichen. Das ist von der Philosophie her gewollt, kann aber für Unternehmen oder Projekte, die proprietären Code schützen wollen, eine Falle sein.
 
 ---
 
@@ -140,7 +140,7 @@ Viele kritische Open-Source-Projekte sind chronisch unterfinanziert. Ein Projekt
 Die Konsequenzen:
 - **Burnout** bei Maintainern ist verbreitet und führt zu Projektabbrüchen
 - **Fehlende Ressourcen** für Sicherheitsaudits und Tests
-- **Abhängigkeit von wenigen Personen** schafft Single Points of Failure
+- **Abhängigkeit von wenigen Personen** schafft [Single Points of Failure](../../wiki/glossar.md#single-point-of-failure-spof)
 
 ---
 
@@ -175,8 +175,8 @@ Das klingt hart. Aber es beschreibt eine Asymmetrie, die viele Unternehmen und E
 | Risiko                | Ursache                              | Gegenmaßnahme                                        |
 |-----------------------|--------------------------------------|------------------------------------------------------|
 | Sicherheitslücken     | Code nicht geprüft, veraltete Pakete | Updates, Monitoring, bewusste Auswahl                |
-| Supply-Chain-Angriffe | Transitive Abhängigkeiten            | SBOM, Dependency-Audits                              |
+| [Supply-Chain-Angriffe](../../wiki/glossar.md#supply-chain-angriff) | Transitive Abhängigkeiten            | SBOM, Dependency-Audits                              |
 | Projektabbruch        | Unterfinanzierung, Burnout           | Projektgesundheit beobachten, aktive Projekte wählen |
 | Falsche Erwartungen   | "Supply Chain"-Denken                | Open-Source-Lizenz ernst nehmen                      |
 | Lizenzwechsel         | Kommerzielle Interessen              | Lizenzen beobachten, Alternativprojekte kennen       |
-| Copyleft-Falle        | GPL-Integration ohne Prüfung         | Lizenzen vor Integration prüfen                      |
+| [Copyleft](../../wiki/glossar.md#copyleft)-Falle        | GPL-Integration ohne Prüfung         | Lizenzen vor Integration prüfen                      |

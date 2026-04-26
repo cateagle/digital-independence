@@ -2,11 +2,11 @@
 
 ## 1. Was ist eine Firewall?
 
-Eine Firewall ist wie ein Türsteher für deinen Server. Sie entscheidet, welche Verbindungen rein- und rausdürfen.
+Eine [Firewall](../glossar.md#firewall) ist wie ein Türsteher für deinen Server. Sie entscheidet, welche Verbindungen rein- und rausdürfen.
 
-Ohne Firewall kann jeder auf der Welt versuchen, sich mit jedem offenen Port deines Servers zu verbinden. Das ist so, als würdest du dein Haus mit weit offenen Türen und Fenstern stehen lassen.
+Ohne Firewall kann jeder auf der Welt versuchen, sich mit jedem offenen [Port](../glossar.md#port) deines Servers zu verbinden. Das ist so, als würdest du dein Haus mit weit offenen Türen und Fenstern stehen lassen.
 
-**Windows-Analogie:** Windows hat eine eingebaute Firewall (Windows Defender Firewall), die du in der Systemsteuerung findest. UFW ist das Linux-Äquivalent, aber über die Kommandozeile bedient.
+**Windows-Analogie:** Windows hat eine eingebaute Firewall (Windows Defender Firewall), die du in der Systemsteuerung findest. [UFW](../glossar.md#ufw-uncomplicated-firewall) ist das Linux-Äquivalent, aber über die Kommandozeile bedient.
 
 UFW steht für **Uncomplicated Firewall** – sie ist absichtlich einfach gehalten und eignet sich gut für Anfänger.
 
@@ -42,7 +42,7 @@ sudo ufw default deny incoming   # Alle eingehenden Verbindungen blockieren
 sudo ufw default allow outgoing  # Alle ausgehenden Verbindungen erlauben
 ```
 
-Das Prinzip dahinter: **Allowlist statt Blocklist**. Statt zu versuchen, alles Schlechte zu blockieren, erlaubst du nur das Nötige.
+Das Prinzip dahinter: [**Allowlist**](../glossar.md#allowlist) **statt** [**Blocklist**](../glossar.md#blocklist). Statt zu versuchen, alles Schlechte zu blockieren, erlaubst du nur das Nötige.
 
 > Wichtig: Richte Regeln ein, bevor du UFW aktivierst – sonst sperrst du dich möglicherweise aus!
 
@@ -50,7 +50,7 @@ Das Prinzip dahinter: **Allowlist statt Blocklist**. Statt zu versuchen, alles S
 
 ### SSH erlauben (Port 22)
 
-SSH ist die Verbindung, über die du überhaupt auf deinen Server zugreifst. Ohne diese Regel sperrst du dich aus!
+[SSH](../glossar.md#ssh-secure-shell) ist die Verbindung, über die du überhaupt auf deinen Server zugreifst. Ohne diese Regel sperrst du dich aus!
 
 ```bash
 sudo ufw allow ssh

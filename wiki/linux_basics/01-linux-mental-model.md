@@ -22,11 +22,11 @@ Wichtige Verzeichnisse:
 - `/usr`: Wo die meisten Programme und ihre Dateien installiert werden (wie Programmdateien).
 - `/opt`: Für optionale oder Software von Drittanbietern.
 
-**Tipp:** Es gibt keine Laufwerksbuchstaben. Alle Laufwerke und Geräte sind "eingebunden" (mounted) irgendwo in diesem Baum.
+**Tipp:** Es gibt keine Laufwerksbuchstaben. Alle Laufwerke und Geräte sind "eingebunden" ([mounted](../glossar.md#mount)) irgendwo in diesem Baum.
 
 ## Konfiguration lebt in Textdateien
 
-In Windows sind Einstellungen oft in der Registrierung oder hinter GUIs versteckt. In Linux wird fast alle Konfiguration in einfachen Textdateien gespeichert. Du kannst diese Dateien mit jedem Texteditor öffnen, lesen und bearbeiten.
+In Windows sind Einstellungen oft in der Registrierung oder hinter [GUIs](../glossar.md#gui-graphical-user-interface) versteckt. In Linux wird fast alle Konfiguration in einfachen Textdateien gespeichert. Du kannst diese Dateien mit jedem Texteditor öffnen, lesen und bearbeiten.
 
 **Beispiel:** Möchtest du ändern, wie dein Netzwerk funktioniert? Bearbeite eine Datei in `/etc`.
 
@@ -40,7 +40,7 @@ Windows hat die Ereignisanzeige. Linux speichert Protokolle als Textdateien in `
 
 ## Dienste laufen im Hintergrund
 
-Windows hat "Dienste" (wie Druckspooler, Windows Update). Linux nennt diese "Dämonen" (Hintergrundprozesse).
+Windows hat "Dienste" (wie Druckspooler, Windows Update). Linux nennt diese "[Dämonen](../glossar.md#daemon)" (Hintergrundprozesse).
 - Verwaltet mit Werkzeugen wie `systemctl` (ähnlich dem Windows-Dienste-Manager).
 - Beispiele: Webserver, Datenbank, SSH-Server.
 
@@ -50,6 +50,6 @@ Windows hat "Dienste" (wie Druckspooler, Windows Update). Linux nennt diese "Dä
 
 Windows hat "Administrator"-Konten. Linux hat "root". Root kann alles tun – Dateien löschen, Einstellungen ändern, das System beschädigen.
 - Du solltest root nur verwenden, wenn es notwendig ist, um Fehler zu vermeiden.
-- Die meisten Befehle werden als normaler Benutzer ausgeführt, und du verwendest `sudo`, um vorübergehend root zu werden.
+- Die meisten Befehle werden als normaler Benutzer ausgeführt, und du verwendest `sudo`, um vorübergehend root zu werden ([Sudo](../glossar.md#sudo-substitute-user-do)).
 
 **Tipp:** Alles als root auszuführen ist riskant. Verwende immer nur die minimal erforderlichen Berechtigungen.

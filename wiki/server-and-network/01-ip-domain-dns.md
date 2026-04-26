@@ -7,8 +7,8 @@ Eine IP-Adresse ist die "Hausnummer" eines Computers im Netzwerk. Jedes Gerät i
 **Windows-Analogie:** Wie eine Telefonnummer – jedes Gerät ist erreichbar, wenn man die richtige Nummer kennt.
 
 Es gibt zwei Versionen:
-- **IPv4:** vier Zahlen von 0–255, z.B. `192.168.1.10` oder `93.184.216.34`
-- **IPv6:** längere Schreibweise, z.B. `2001:0db8:85a3::8a2e:0370:7334` (noch selten im Alltag)
+- **[IPv4](../glossar.md#ipv4-internet-protocol-version-4):** vier Zahlen von 0–255, z.B. `192.168.1.10` oder `93.184.216.34`
+- **[IPv6](../glossar.md#ipv6-internet-protocol-version-6):** längere Schreibweise, z.B. `2001:0db8:85a3::8a2e:0370:7334` (noch selten im Alltag)
 
 ## 2. Öffentliche vs. private IP-Adressen
 
@@ -47,7 +47,7 @@ blog.example.com
 
 ## 4. Was ist DNS?
 
-DNS (Domain Name System) ist das Telefonbuch des Internets. Es übersetzt Domains in IP-Adressen.
+[DNS](../glossar.md#dns-domain-name-system) (Domain Name System) ist das Telefonbuch des Internets. Es übersetzt Domains in IP-Adressen.
 
 **Ablauf einer DNS-Auflösung:**
 ```
@@ -68,8 +68,8 @@ Dein Browser verbindet sich mit dieser IP
 |-----|-----------|---------|
 | A | Domain → IPv4-Adresse | `example.com → 93.184.216.34` |
 | AAAA | Domain → IPv6-Adresse | `example.com → 2606:2800:...` |
-| CNAME | Domain → andere Domain (Alias) | `www.example.com → example.com` |
-| MX | Mail-Server für die Domain | `example.com → mail.example.com` |
+| [CNAME](../glossar.md#cname-canonical-name) | Domain → andere Domain (Alias) | `www.example.com → example.com` |
+| [MX](../glossar.md#mx-record-mail-exchange-record) | Mail-Server für die Domain | `example.com → mail.example.com` |
 | TXT | Freitext (oft für Verifikationen) | SPF, DKIM, Let's Encrypt |
 
 **A-Record** – der häufigste Eintrag. Zeigt deine Domain auf deinen Server:
@@ -90,7 +90,7 @@ Vorteil: Änderst du die IP beim A-Record, folgt der CNAME automatisch.
 
 ## 6. Was ist TTL?
 
-TTL (Time to Live) bestimmt, wie lange DNS-Einträge im Cache gespeichert werden.
+[TTL](../glossar.md#ttl-time-to-live) (Time to Live) bestimmt, wie lange DNS-Einträge im Cache gespeichert werden.
 
 - TTL `3600` = 1 Stunde: DNS-Server und Browser erinnern sich 1 Stunde an den Eintrag.
 - Niedrige TTL (z.B. `300` = 5 Minuten): Änderungen werden schnell wirksam – gut vor einem Serverwechsel.

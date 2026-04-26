@@ -6,7 +6,7 @@ Linux begegnet dir überall: auf Webservern, in Smartphones (Android), in Router
 
 ## Der Kernel: Das Herzstück
 
-Linux ist im strengen Sinne nur ein **Kernel**, die unterste Schicht eines Betriebssystems, die direkt mit der Hardware kommuniziert. Der Kernel verwaltet:
+Linux ist im strengen Sinne nur ein **[Kernel](../../wiki/glossar.md#kernel)**, die unterste Schicht eines Betriebssystems, die direkt mit der Hardware kommuniziert. Der Kernel verwaltet:
 
 - den **Arbeitsspeicher** (wer bekommt wie viel RAM?)
 - die **CPU** (welches Programm läuft wann?)
@@ -33,7 +33,7 @@ Hardware (CPU, RAM, Festplatte, Netzwerk)
 
 1991 veröffentlichte der finnische Student **Linus Torvalds** den ersten Linux-Kernel als freies Hobby-Projekt. Heute arbeiten tausende Entwickler aus aller Welt daran mit – darunter Ingenieure von Google, Red Hat, Intel und Microsoft.
 
-Der Name "Linux" setzt sich zusammen aus **Li**nus und U**nix**. Unix war das professionelle Betriebssystem, das Linux ursprünglich inspirierte.
+Der Name "Linux" setzt sich zusammen aus **Li**nus und U**nix**. [Unix](../../wiki/glossar.md#unix) war das professionelle Betriebssystem, das Linux ursprünglich inspirierte.
 
 ---
 
@@ -60,7 +60,7 @@ Wenn du selbst hostest, wirst du fast immer mit Linux arbeiten. Das hat gute Gr�
 - **Ressourcenschonend**: Läuft auch auf günstiger Hardware und VPS-Instanzen mit wenig RAM
 - **Sicherheit**: Klares Rechtemodell, regelmäßige Sicherheitsupdates, keine unnötige Software
 - **Kontrolle**: Du entscheidest, was auf dem System läuft – keine automatischen Updates ohne dein Wissen
-- **Standard**: Fast alle Server-Software (nginx, PostgreSQL, Docker) ist primär für Linux entwickelt
+- **Standard**: Fast alle Server-Software ([nginx](../../wiki/glossar.md#nginx-engine-x), [PostgreSQL](../../wiki/glossar.md#postgresql), [Docker](../../wiki/glossar.md#docker)) ist primär für Linux entwickelt
 - **Kosten**: Ein Linux Server ist quasi kostenlos. Du musst dich nicht um Lizenzkeys kümmern, wie es z.B. bei einem Windows Server der fall wäre.
 
 ---
@@ -70,7 +70,7 @@ Wenn du selbst hostest, wirst du fast immer mit Linux arbeiten. Das hat gute Gr�
 | Merkmal         | Linux                           | Windows                    |
 |-----------------|---------------------------------|----------------------------|
 | Kosten          | Kostenlos                       | Lizenzpflichtig            |
-| Oberfläche      | Meist Terminal, optional GUI    | GUI als Standard           |
+| Oberfläche      | Meist [Terminal](../../wiki/glossar.md#terminal), optional [GUI](../../wiki/glossar.md#gui-graphical-user-interface)    | GUI als Standard           |
 | Paketverwaltung | `apt`, `dnf`, `pacman`          | Microsoft Store, manuell   |
 | Dateisystem     | `/` als Wurzel                  | `C:\`, `D:\` als Laufwerke |
 | Berechtigungen  | Benutzer/Gruppe/Andere          | ACLs                       |

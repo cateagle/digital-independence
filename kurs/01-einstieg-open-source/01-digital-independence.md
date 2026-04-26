@@ -94,7 +94,7 @@ E-Mail ist nur die bekannteste Variante dieses Musters. Das gleiche gilt für:
 | **Smartphone-Konto** (Apple ID, Google Account) | Alle Apps, Käufe, 2FA-Codes, Fotos, Gerätezugriff |
 | **Domain / Hosting** (für Organisationen) | Website, alle @domain.de-Mailadressen, öffentliche Erreichbarkeit |
 
-Das Muster ist immer gleich: **Zentralisierung erzeugt Single Points of Failure.**
+Das Muster ist immer gleich: **Zentralisierung erzeugt [Single Points of Failure](../../wiki/glossar.md#single-point-of-failure-spof).**
 Je mehr Dienste auf einem einzigen Konto oder Anbieter aufbauen, desto größer der
 Schaden, wenn dieser eine Punkt wegbricht.
 
@@ -146,7 +146,7 @@ Die Abhängigkeit entsteht nicht durch einen einzelnen schlechten Vertrag, sonde
 
 ### Self-Hosting: individuelle Antwort mit klaren Grenzen
 
-**Self-Hosting**: Das Betreiben eigener Dienste auf eigener oder selbst gewählter Hardware ist die direkteste Antwort auf individuelle Abhängigkeiten:
+**[Self-Hosting](../../wiki/glossar.md#self-hosting)**: Das Betreiben eigener Dienste auf eigener oder selbst gewählter Hardware ist die direkteste Antwort auf individuelle Abhängigkeiten:
 
 | Statt         | Selbst hosten           |
 |---------------|-------------------------|
@@ -169,9 +169,9 @@ Self-Hosting ist ein wichtiger, sinnvoller Schritt, aber er ist nicht das Ende d
 
 ### Dezentralisierung: das Fediverse-Modell
 
-Eine andere Antwort kommt aus der Netzarchitektur: **Dezentralisierung**.
+Eine andere Antwort kommt aus der Netzarchitektur: **[Dezentralisierung](../../wiki/glossar.md#dezentralisierung)**.
 
-Das **Fediverse** ist ein Verbund von Servern, die über offene Protokolle miteinander kommunizieren. Es zeigt, wie Infrastruktur ohne zentralen Kontrollpunkt funktionieren kann. Mastodon, PeerTube, Matrix/Element sind Fediverse-Dienste. Wer eine eigene Instanz betreibt, ist weder von einem Unternehmen noch von einem einzelnen Betreiber abhängig und kann trotzdem mit allen anderen kommunizieren.
+Das **[Fediverse](../../wiki/glossar.md#fediverse)** ist ein Verbund von Servern, die über offene Protokolle miteinander kommunizieren. Es zeigt, wie Infrastruktur ohne zentralen Kontrollpunkt funktionieren kann. Mastodon, PeerTube, Matrix/Element sind Fediverse-Dienste. Wer eine eigene Instanz betreibt, ist weder von einem Unternehmen noch von einem einzelnen Betreiber abhängig und kann trotzdem mit allen anderen kommunizieren.
 
 Das dezentrale Modell hat einen weiteren Vorteil: Es schützt nicht nur vor Unternehmens-, sondern auch vor staatlichem Machtmissbrauch. Wer keine zentrale Plattform abschalten kann, kann auch keine zentrale Zensur durchsetzen.
 
@@ -179,11 +179,11 @@ Das dezentrale Modell hat einen weiteren Vorteil: Es schützt nicht nur vor Unte
 
 Auf der Ebene von Software gibt es eine klare Grundregel: Software, die mit öffentlichen Mitteln finanziert wird, sollte auch öffentlich zugänglich sein, als Open Source.
 
-Das ist der Kern der **"Public Money, Public Code"**-Forderung, die das Europäische Parlament 2025 in seinen Empfehlungen zur digitalen Souveränität ausdrücklich unterstützt hat.
+Das ist der Kern der **"[Public Money, Public Code](../../wiki/glossar.md#public-money-public-code)"**-Forderung, die das Europäische Parlament 2025 in seinen Empfehlungen zur digitalen Souveränität ausdrücklich unterstützt hat.
 
-Konkret arbeitet das Zentrum für Digitale Souveränität der Öffentlichen Verwaltung (**ZenDiS**) an **openDesk**, einem Open-Source-Arbeitsplatz für Behörden, der proprietäre Office-Software ersetzen soll. Frankreich und die Niederlande kooperieren bereits, weitere Länder haben Interesse bekundet.
+Konkret arbeitet das Zentrum für Digitale Souveränität der Öffentlichen Verwaltung (**[ZenDiS](../../wiki/glossar.md#zendis-zentrum-für-digitale-souveränität-der-öffentlichen-verwaltung)**) an **openDesk**, einem Open-Source-Arbeitsplatz für Behörden, der proprietäre Office-Software ersetzen soll. Frankreich und die Niederlande kooperieren bereits, weitere Länder haben Interesse bekundet.
 
-Offene Software allein reicht aber nicht. Es braucht auch die Kompetenz, sie eigenständig zu beurteilen, einzusetzen und weiterzuentwickeln. Und bei permissiven Lizenzen (MIT, Apache) besteht das Risiko, dass die Vorarbeit der öffentlichen Hand später von Unternehmen privatisiert wird. Das ist ein Argument dafür, bei öffentlich finanzierter Software Copyleft-Lizenzen (GPL, AGPL) zu bevorzugen, die eine Privatisierung ausschließen.
+Offene Software allein reicht aber nicht. Es braucht auch die Kompetenz, sie eigenständig zu beurteilen, einzusetzen und weiterzuentwickeln. Und bei permissiven Lizenzen (MIT, Apache) besteht das Risiko, dass die Vorarbeit der öffentlichen Hand später von Unternehmen privatisiert wird. Das ist ein Argument dafür, bei öffentlich finanzierter Software [Copyleft](../../wiki/glossar.md#copyleft)-Lizenzen ([GPL](../../wiki/glossar.md#gpl-gnu-general-public-license), [AGPL](../../wiki/glossar.md#agpl-gnu-affero-general-public-license)) zu bevorzugen, die eine Privatisierung ausschließen.
 
 ---
 
@@ -217,9 +217,9 @@ Jeder Schritt zählt:
 
 | Ebene             | Beispiele                                                                           |
 |-------------------|-------------------------------------------------------------------------------------|
-| Individuum        | Open-Source-Software nutzen, eigene Dienste hosten, Datensparsamkeit üben           |
+| Individuum        | Open-Source-Software nutzen, eigene Dienste hosten, [Datensparsamkeit](../../wiki/glossar.md#datensparsamkeit) üben           |
 | Community         | Dezentrale Plattformen (Fediverse) mitbetreiben und nutzen                          |
-| Zivilgesellschaft | NGOs stärken, die für digitale Rechte kämpfen (GFF, EFF, HateAid)                   |
+| Zivilgesellschaft | NGOs stärken, die für digitale Rechte kämpfen (GFF, [EFF](../../wiki/glossar.md#eff-electronic-frontier-foundation), HateAid)                   |
 | Institutionen     | Öffentliche Verwaltungen auf Open Source umstellen, ZenDiS unterstützen             |
 | Politik           | Public Money, Public Code durchsetzen, Cloud Act mit eigener Infrastruktur begegnen |
 

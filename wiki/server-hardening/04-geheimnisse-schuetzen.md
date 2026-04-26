@@ -108,7 +108,7 @@ chown alice:alice .env
 
 ## 5. Secrets in Docker: Umgebungsvariablen
 
-In Docker-Containern übergibt man Secrets über Umgebungsvariablen – nicht über Dateien im Container.
+In Docker-Containern übergibt man Secrets über [Umgebungsvariablen](../glossar.md#environment-variable-umgebungsvariable) – nicht über Dateien im Container.
 
 ### Methode 1: env_file in docker-compose.yml
 

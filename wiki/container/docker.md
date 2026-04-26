@@ -35,8 +35,8 @@ docker run hello-world
 
 | Befehl | Beschreibung |
 |--------|-------------|
-| `docker pull <image>` | Image von Docker Hub herunterladen |
-| `docker build -t <name> .` | Image aus einem Dockerfile bauen |
+| `docker pull <image>` | Image von [Docker Hub](../glossar.md#docker-hub) herunterladen |
+| `docker build -t <name> .` | Image aus einem [Dockerfile](../glossar.md#dockerfile) bauen |
 | `docker run -d -p <host>:<container> <image>` | Container im Hintergrund starten |
 | `docker ps` | Laufende Container anzeigen |
 | `docker ps -a` | Alle Container anzeigen |
@@ -51,7 +51,7 @@ docker run hello-world
 
 # Docker Compose
 
-Wenn mehrere Container verwendet werden, wird das manuelle Starten in der richtigen Reihenfolge schnell komplex und unübersichtlich. Genau dafür gibt es Docker Compose. Mit Docker Compose kannst du mehrere Container mit all ihren Optionen und Abhängigkeiten in einer einzigen Konfigurationsdatei definieren und dann mit einem einzigen Befehl starten. Das ist das Werkzeug, das du beim Self-Hosting am häufigsten verwenden wirst.
+Wenn mehrere [Container](../glossar.md#container) verwendet werden, wird das manuelle Starten in der richtigen Reihenfolge schnell komplex und unübersichtlich. Genau dafür gibt es [Docker Compose](../glossar.md#docker-compose). Mit Docker Compose kannst du mehrere Container mit all ihren Optionen und Abhängigkeiten in einer einzigen Konfigurationsdatei definieren und dann mit einem einzigen Befehl starten. Das ist das Werkzeug, das du beim [Self-Hosting](../glossar.md#self-hosting) am häufigsten verwenden wirst.
 
 ---
 

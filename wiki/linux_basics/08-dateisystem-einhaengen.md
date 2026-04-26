@@ -1,6 +1,6 @@
 # 08 - Dateisystem & Einhängen
 
-Unter Windows bekommst du beim Anschließen einer Festplatte automatisch einen neuen Laufwerksbuchstaben wie `D:` oder `E:`. Unter Linux gibt es keine Laufwerksbuchstaben. Stattdessen werden Laufwerke und Partitionen in den bestehenden Verzeichnisbaum *eingehängt* (gemountet). Dieses Kapitel erklärt, wie das funktioniert und wie du Speicherplatz im Blick behältst.
+Unter Windows bekommst du beim Anschließen einer Festplatte automatisch einen neuen Laufwerksbuchstaben wie `D:` oder `E:`. Unter Linux gibt es keine Laufwerksbuchstaben. Stattdessen werden Laufwerke und Partitionen in den bestehenden Verzeichnisbaum *eingehängt* ([gemountet](../glossar.md#mount)). Dieses Kapitel erklärt, wie das funktioniert und wie du Speicherplatz im Blick behältst.
 
 ---
 

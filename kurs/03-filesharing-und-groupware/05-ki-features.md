@@ -36,7 +36,7 @@ Nextcloud GmbH bietet den Zugang zu KI-Servern als Subscription an.
 Nextcloud kann gegen die OpenAI-API konfiguriert werden.
 - Einfach zu konfigurieren
 - Kosten pro API-Call
-- Daten gehen zu OpenAI → keine echte Datensouveränität
+- Daten gehen zu OpenAI → keine echte [Datensouveränität](../../wiki/glossar.md#datensouveränität)
 - Es gibt auch andere Dienstleister, die eine OpenAI-kompatible Schnittstelle bieten.
 
 ### 3. Lokales KI-Backend (Self-hosted)
@@ -46,7 +46,7 @@ Eigene KI-Modelle auf dem eigenen Server. Das ist der datenschutzfreundliche Weg
 
 ## Exkurs: Ollama als lokales KI-Backend
 
-[Ollama](https://ollama.com/) ist ein Tool, das es einfach macht, **Large Language Models (LLMs) lokal zu betreiben**. Es läuft als Server, der eine OpenAI-kompatible API anbietet. Nextcloud kann also Ollama ansprechen, als wäre es OpenAI.
+[Ollama](https://ollama.com/) ist ein Tool, das es einfach macht, **Large Language Models ([LLMs](../../wiki/glossar.md#llm-large-language-model)) lokal zu betreiben**. Es läuft als Server, der eine OpenAI-kompatible API anbietet. Nextcloud kann also Ollama ansprechen, als wäre es OpenAI.
 
 ### Was Ollama macht
 
@@ -60,7 +60,7 @@ Nextcloud (App)
    Antwort zurück an Nextcloud
 ```
 
-Ollama verwaltet Modelle wie Docker Images verwaltet: Herunterladen, versionieren, tauschen.
+Ollama verwaltet Modelle wie [Docker](../../wiki/glossar.md#docker) Images verwaltet: Herunterladen, versionieren, tauschen.
 
 ### Ollama als Docker Container
 

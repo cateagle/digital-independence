@@ -14,7 +14,7 @@ Beispiele für Hosts:
 
 ## 2. Was ist ein Port?
 
-Ein Port ist eine nummerierte "Tür" an einem Host. Über Ports können auf einem einzigen Server viele verschiedene Dienste gleichzeitig laufen.
+Ein [Port](../glossar.md#port) ist eine nummerierte "Tür" an einem Host. Über Ports können auf einem einzigen Server viele verschiedene Dienste gleichzeitig laufen.
 
 ```
 Eingehende Verbindung:
@@ -45,19 +45,19 @@ Ports sind Zahlen von 0 bis 65535:
 | 8080 | TCP | HTTP-Alt | Oft für Entwicklung/Proxy |
 | 27017 | TCP | MongoDB | MongoDB-Datenbank |
 
-**Merkhilfe:** Port 80 = HTTP (unverschlüsselt), Port 443 = HTTPS (verschlüsselt). Im Browser tippst du normalerweise keine Ports – der Browser ergänzt sie automatisch.
+**Merkhilfe:** Port 80 = [HTTP](../glossar.md#http-hypertext-transfer-protocol) (unverschlüsselt), Port 443 = [HTTPS](../glossar.md#https-hypertext-transfer-protocol-secure) (verschlüsselt). Im Browser tippst du normalerweise keine Ports – der Browser ergänzt sie automatisch.
 
 ## 4. TCP vs. UDP
 
 Es gibt zwei grundlegende Transportprotokolle:
 
-### TCP (Transmission Control Protocol)
+### [TCP](../glossar.md#tcp-transmission-control-protocol) (Transmission Control Protocol)
 - **Zuverlässig:** Datenpakete werden in richtiger Reihenfolge zugestellt
 - **Verbindungsorientiert:** Es wird eine Verbindung aufgebaut (Handshake), bevor Daten fließen
 - **Langsamer:** Bestätigung jedes Pakets kostet Zeit
 - **Verwendung:** HTTP/HTTPS, SSH, E-Mail, Datenbanken – überall wo Korrektheit wichtig ist
 
-### UDP (User Datagram Protocol)
+### [UDP](../glossar.md#udp-user-datagram-protocol) (User Datagram Protocol)
 - **Unzuverlässig:** Pakete können verloren gehen oder in falscher Reihenfolge ankommen
 - **Verbindungslos:** Pakete werden einfach losgeschickt, kein Handshake
 - **Schneller:** Kein Overhead durch Bestätigungen
@@ -103,7 +103,7 @@ sudo netstat -tulnp
 
 ## 6. Ports mit der Firewall verwalten (ufw)
 
-Ubuntu verwendet `ufw` (Uncomplicated Firewall) als einfache Firewall-Verwaltung.
+Ubuntu verwendet `ufw` ([UFW](../glossar.md#ufw-uncomplicated-firewall) – Uncomplicated Firewall) als einfache [Firewall](../glossar.md#firewall)-Verwaltung.
 
 **Status anzeigen:**
 ```bash

@@ -18,7 +18,7 @@ Die wichtigste Backup-Strategie überhaupt:
 1 Kopie an einem anderen Ort (off-site)
 ```
 
-**Konkret für Self-Hosting:**
+**Konkret für [Self-Hosting](../glossar.md#self-hosting):**
 - Kopie 1: Produktionsdaten auf dem Server
 - Kopie 2: Backup auf einer externen Festplatte oder zweitem Laufwerk
 - Kopie 3: Backup in der Cloud (z.B. Hetzner Storage Box, Backblaze B2)
@@ -87,7 +87,7 @@ tar -czf "backup-$(date +%Y-%m-%d).tar.gz" /var/data/
 
 ## 5. PostgreSQL-Datenbank sichern (pg_dump)
 
-Dateisystem-Backups einer laufenden Datenbank sind unzuverlässig – die Datenbankdateien können inkonsistent sein. Verwende stattdessen `pg_dump`.
+Dateisystem-Backups einer laufenden Datenbank sind unzuverlässig – die Datenbankdateien können inkonsistent sein. Verwende stattdessen [`pg_dump`](../glossar.md#pg_dump).
 
 **Einzelne Datenbank sichern:**
 ```bash
@@ -116,7 +116,7 @@ docker exec postgres-container pg_dump -U postgres meine_datenbank > backup.sql
 
 ## 6. Docker-Volume-Backups
 
-Docker-Volumes enthalten die persistenten Daten deiner Container (Datenbanken, Uploads, Konfigurationen).
+[Docker](../glossar.md#docker)-Volumes enthalten die persistenten Daten deiner Container (Datenbanken, Uploads, Konfigurationen).
 
 **Volume-Inhalt in tar-Archiv sichern:**
 ```bash
@@ -179,7 +179,7 @@ chmod +x /usr/local/bin/backup.sh
 sudo /usr/local/bin/backup.sh
 ```
 
-**Mit cron täglich um 3 Uhr nachts ausführen:**
+**Mit [Cron](../glossar.md#cron--crontab) täglich um 3 Uhr nachts ausführen:**
 ```bash
 sudo crontab -e
 ```

@@ -100,7 +100,7 @@ du -sh /var/* | sort -rh | head -10
 du -sh /var/log/
 ```
 
-**Docker-spezifisch: Wie viel Platz verbraucht Docker?**
+**[Docker](../glossar.md#docker)-spezifisch: Wie viel Platz verbraucht Docker?**
 ```bash
 docker system df
 ```
@@ -169,7 +169,7 @@ sudo journalctl -u nginx -n 50
 
 ## 6. Logs mit journalctl lesen
 
-`journalctl` ist das zentrale Log-System unter Ubuntu (systemd-basiert).
+[`journalctl`](../glossar.md#journald--journalctl) ist das zentrale Log-System unter Ubuntu ([systemd](../glossar.md#systemd)-basiert).
 
 **Windows-Analogie:** Die Windows-Ereignisanzeige (Event Viewer) zeigt System- und Anwendungslogs. `journalctl` macht dasselbe in der Kommandozeile.
 

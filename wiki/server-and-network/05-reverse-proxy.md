@@ -2,7 +2,7 @@
 
 ## 1. Was ist ein Reverse Proxy?
 
-Ein Reverse Proxy ist ein Server, der zwischen dem Internet und deinen eigentlichen Diensten sitzt. Anfragen kommen beim Reverse Proxy an, der sie dann an den richtigen internen Dienst weiterleitet.
+Ein [Reverse Proxy](../glossar.md#reverse-proxy) ist ein Server, der zwischen dem Internet und deinen eigentlichen Diensten sitzt. Anfragen kommen beim Reverse Proxy an, der sie dann an den richtigen internen Dienst weiterleitet.
 
 ```
 Internet
@@ -29,7 +29,7 @@ https://api.example.com    →  Reverse Proxy  →  localhost:5000
 ```
 
 **Weitere Vorteile:**
-- **TLS-Terminierung:** TLS wird einmalig am Proxy beendet – interne Dienste brauchen kein HTTPS
+- **TLS-Terminierung:** [TLS](../glossar.md#tls-transport-layer-security) wird einmalig am Proxy beendet – interne Dienste brauchen kein [HTTPS](../glossar.md#https-hypertext-transfer-protocol-secure)
 - **Sicherheit:** Interne Dienste sind nicht direkt aus dem Internet erreichbar
 - **Load Balancing:** Anfragen können auf mehrere Server verteilt werden
 - **Caching:** Statische Inhalte können gecacht werden
@@ -38,7 +38,7 @@ https://api.example.com    →  Reverse Proxy  →  localhost:5000
 
 ## 3. Nginx als Reverse Proxy
 
-Nginx ist ein leistungsstarker Webserver, der auch als Reverse Proxy eingesetzt wird. Er ist auf Ubuntu sehr verbreitet.
+[Nginx](../glossar.md#nginx-engine-x) ist ein leistungsstarker Webserver, der auch als Reverse Proxy eingesetzt wird. Er ist auf Ubuntu sehr verbreitet.
 
 **Installation:**
 ```bash
@@ -230,11 +230,11 @@ sudo tail -f /var/log/nginx/error.log
 Traefik ist ein moderner Reverse Proxy, der besonders gut mit Docker zusammenarbeitet. Er konfiguriert sich automatisch, wenn neue Docker-Container starten.
 
 **Vorteile gegenüber Nginx:**
-- Automatische TLS-Zertifikate ohne manuellen certbot-Aufruf
+- Automatische TLS-Zertifikate ohne manuellen [Certbot](../glossar.md#certbot)-Aufruf
 - Konfiguration über Docker-Labels direkt am Container
 - Eingebautes Dashboard für Übersicht
 
-**Beispiel mit Docker Compose:**
+**Beispiel mit [Docker Compose](../glossar.md#docker-compose):**
 ```yaml
 # docker-compose.yml
 services:

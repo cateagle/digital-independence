@@ -14,8 +14,8 @@ Open-Source-Lizenzen lassen sich in zwei Grundtypen einteilen:
 
 | Typ           | Merkmal                                                              | Beispiele            |
 |---------------|----------------------------------------------------------------------|----------------------|
-| **Permissiv** | Wenige Einschränkungen, auch proprietäre Nutzung erlaubt             | MIT, Apache 2.0, BSD |
-| **Copyleft**  | Abgeleitete Werke müssen unter gleicher Lizenz veröffentlicht werden | GPL, LGPL, AGPL      |
+| **Permissiv** | Wenige Einschränkungen, auch proprietäre Nutzung erlaubt             | [MIT](../../wiki/glossar.md#mit-lizenz), [Apache 2.0](../../wiki/glossar.md#apache-20-apache-license-20), [BSD](../../wiki/glossar.md#bsd-berkeley-software-distribution) |
+| **[Copyleft](../../wiki/glossar.md#copyleft)**  | Abgeleitete Werke müssen unter gleicher Lizenz veröffentlicht werden | [GPL](../../wiki/glossar.md#gpl-gnu-general-public-license), [LGPL](../../wiki/glossar.md#lgpl-gnu-lesser-general-public-license), [AGPL](../../wiki/glossar.md#agpl-gnu-affero-general-public-license)      |
 
 ---
 
@@ -86,13 +86,13 @@ Eine abgeschwächte Version der GPL. Gedacht für **Bibliotheken**, die auch in 
 
 Die **strengste** der GPL-Varianten. Schließt eine wichtige Lücke der normalen GPL:
 
-**Das Problem mit GPL und SaaS:**
+**Das Problem mit GPL und [SaaS](../../wiki/glossar.md#saas-software-as-a-service):**
 Du könntest GPL-Software auf einem Server betreiben und anderen als Dienst anbieten, ohne den Quellcode zu veröffentlichen - denn du *verbreitest* die Software nicht, du nutzt sie nur intern.
 
 **Die AGPL-Lösung:**
 Wer AGPL-Software über ein Netzwerk anbietet (z.B. als Web-App), muss den Quellcode ebenfalls veröffentlichen.
 
-**Bekannte Projekte:** Nextcloud, Gitea, Mastodon, MongoDB (ab 2018)
+**Bekannte Projekte:** [Nextcloud](../../wiki/glossar.md#nextcloud), Gitea, [Mastodon](../../wiki/glossar.md#mastodon), MongoDB (ab 2018)
 
 **Aus diesem Grund** wechseln Unternehmen manchmal von MIT/Apache auf AGPL, wenn sie verhindern wollen, dass Cloud-Anbieter ihre Software ohne Beitrag nutzen.
 
@@ -154,4 +154,4 @@ Es gibt auch Projekte, die gleichzeitig unter MIT und Apache 2.0 stehen. Das hat
 
 ## Weiter geht es
 
--> [Geschäftsmodelle](03-geschaeftsmodelle.md)
+-> [Geschäftsmodelle](04-geschaeftsmodelle.md)

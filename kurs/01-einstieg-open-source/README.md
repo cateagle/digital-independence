@@ -2,7 +2,7 @@
 
 ## Allgemeines
 
-Wir haben einen Matrix Chatroom für den Kurs. Ich könnt euch über den Button auf der Kursseite in [Edu Hub](edu.opencampus.sh) anmelden.
+Wir haben einen Matrix Chatroom für den Kurs. Ich könnt euch über den Button auf der Kursseite in [Edu Hub](https://edu.opencampus.sh) anmelden.
 
 ## Abschlussbedingungen
 - Maximal 2 Fehlzeiten
@@ -23,5 +23,5 @@ Wir haben einen Matrix Chatroom für den Kurs. Ich könnt euch über den Button 
 ## Aufgaben für nächste Woche
 - Showcase vorbereiten (erste Gruppe)
 - Kurs Repository anschauen (wenn du das liest, bist du fertig)
-- Seite vom [Digital Independence Day](di.day) besuchen
+- Seite vom [Digital Independence Day](https://di.day) besuchen
 - Laptop mitbringen mit VM Software installiert (z.B. VirtualBox, VMWare , UTM, QEMU)

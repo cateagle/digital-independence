@@ -8,11 +8,11 @@ Wenn du weißt, wie du laufende Programme beobachten und steuern kannst, verlier
 
 ## Was ist ein Prozess?
 
-Jedes Mal, wenn du ein Programm startest, erzeugt Linux einen **Prozess**. Jeder Prozess bekommt eine eindeutige Nummer, die **PID** (Process ID).
+Jedes Mal, wenn du ein Programm startest, erzeugt Linux einen [**Prozess**](../glossar.md#prozess). Jeder Prozess bekommt eine eindeutige Nummer, die [**PID**](../glossar.md#pid-process-id) (Process ID).
 
 - Ein Webserver wie nginx ist ein Prozess.
-- Deine Shell (bash) ist ein Prozess.
-- Der SSH-Daemon, der deine Verbindung hält, ist ein Prozess.
+- Deine [Shell](../glossar.md#shell) ([Bash](../glossar.md#bash)) ist ein Prozess.
+- Der [SSH](../glossar.md#ssh-secure-shell)-[Daemon](../glossar.md#daemon), der deine Verbindung hält, ist ein Prozess.
 
 Prozesse können weitere Prozesse starten – diese nennt man **Kindprozesse** (child processes). Der erste Prozess beim Systemstart heißt `systemd` und hat immer die PID 1.
 

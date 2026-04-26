@@ -1,6 +1,6 @@
 # Was ist Open Source?
 
-Open Source bedeutet, dass der **Quellcode einer Software öffentlich einsehbar** ist. Jeder kann lesen, wie das Programm funktioniert. Doch Open Source ist mehr als nur "Code veröffentlichen". Es ist eine Philosophie, eine Bewegung und ein Entwicklungsmodell.
+Open Source bedeutet, dass der **[Quellcode](../../wiki/glossar.md#quellcode-source-code) einer Software öffentlich einsehbar** ist. Jeder kann lesen, wie das Programm funktioniert. Doch Open Source ist mehr als nur "Code veröffentlichen". Es ist eine Philosophie, eine Bewegung und ein Entwicklungsmodell.
 
 ---
 
@@ -15,7 +15,7 @@ if x > 10:          →       01001101 10110001 ...
     print("groß")
 ```
 
-Bei **proprietärer Software** (z.B. Microsoft Office, Adobe Photoshop) erhältst du nur den fertigen Maschinencode. Du kannst nicht reinschauen, wie das Programm wirklich funktioniert.
+Bei **[proprietärer Software](../../wiki/glossar.md#proprietäre-software)** (z.B. Microsoft Office, Adobe Photoshop) erhältst du nur den fertigen Maschinencode. Du kannst nicht reinschauen, wie das Programm wirklich funktioniert.
 
 Bei **Open-Source-Software** bekommst du beides: Das fertige Programm *und* den vollständigen Quellcode.
 
@@ -24,7 +24,7 @@ Bei **Open-Source-Software** bekommst du beides: Das fertige Programm *und* den 
 ## Die Open-Source-Definition
 
 Nicht jede "freie Software" ist automatisch Open Source. Die gemeinnützige Organisation
-**Open Source Initiative (OSI)** hat 10 Kriterien definiert, die eine Software erfüllen muss:
+**[Open Source Initiative (OSI)](../../wiki/glossar.md#osi-open-source-initiative)** hat 10 Kriterien definiert, die eine Software erfüllen muss:
 
 - Freie Weitergabe: du darfst die Software verschenken oder verkaufen
 - Quellcode muss enthalten oder öffentlich zugänglich sein
@@ -44,7 +44,7 @@ In der Frühzeit der Computerei war Software-Sharing selbstverständlich. Univer
 
 ### Die Gegenbewegung: GNU und die Free Software Foundation (1983)
 
-Als Software zunehmend kommerziell und proprietär wurde, reagierte **Richard Stallman** 1983 mit dem **GNU-Projekt**: einem Versuch, ein vollständig freies Betriebssystem zu schaffen. 1985 gründete er die **Free Software Foundation (FSF)**.
+Als Software zunehmend kommerziell und proprietär wurde, reagierte **Richard Stallman** 1983 mit dem **[GNU](../../wiki/glossar.md#gnu--gnulinux)-Projekt**: einem Versuch, ein vollständig freies Betriebssystem zu schaffen. 1985 gründete er die **[Free Software Foundation (FSF)](../../wiki/glossar.md#fsf-free-software-foundation)**.
 
 Stallmans Philosophie: Software-Freiheit ist eine ethische Frage. Er unterscheidet vier fundamentale Freiheiten:
 
@@ -57,7 +57,7 @@ Stallmans Philosophie: Software-Freiheit ist eine ethische Frage. Er unterscheid
 
 ### Linux und der Durchbruch (1991)
 
-1991 veröffentlichte Linus Torvalds den **Linux-Kernel**, zunächst als persönliches
+1991 veröffentlichte Linus Torvalds den **[Linux-Kernel](../../wiki/glossar.md#kernel)**, zunächst als persönliches
 Projekt. In Kombination mit den GNU-Werkzeugen entstand ein vollständiges,
 freies Betriebssystem: **GNU/Linux**.
 
@@ -75,7 +75,7 @@ Open Source ist die Grundlage des modernen Internets:
 - **Android** (basiert auf Linux) auf ~72% aller Smartphones
 - **Firefox**, **Chromium**, **VS Code**, **Git** alles Open Source
 - Cloudinfrastruktur bei Amazon, Google und Microsoft basiert auf Linux
-- Kubernetes, Docker, PostgreSQL, nginx der Self-Hosting-Stack ist Open Source
+- [Kubernetes](../../wiki/glossar.md#kubernetes), [Docker](../../wiki/glossar.md#docker), [PostgreSQL](../../wiki/glossar.md#postgresql), [nginx](../../wiki/glossar.md#nginx-engine-x) der Self-Hosting-Stack ist Open Source
 
 ---
 
@@ -99,4 +99,4 @@ sind auch im Sinne der Free Software Foundation "frei" und umgekehrt.
 
 Jetzt weißt du, was Open Source ist und woher es kommt. Als nächstes schauen wir uns an, wie Lizenzen regeln, was du mit Open-Source-Software tun darfst:
 
-→ [Lizenzen](02-lizenzen.md)
+→ [Lizenzen](03-lizenzen.md)

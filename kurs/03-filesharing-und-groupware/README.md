@@ -7,7 +7,7 @@
 3. [Exkurs: Datenbanken](03-datenbanken.md): Welche Datenbank wofür, und warum AIO das für uns entscheidet
 4. [Exkurs: Plugins & Apps](04-plugins.md): Der Nextcloud App Store: Was sinnvoll ist, was man vermeiden sollte
 5. [Exkurs: KI-Features & KI-Backend](05-ki-features.md): Nextcloud AI und Ollama als lokales LLM-Backend
-6. [Exkurs TLS](06-exkurs-tls.md): Verschlüsselte Verbindung zum Nextcloud Server
+6. [Exkurs TLS](06-tls-exkurs.md): Verschlüsselte Verbindung zum Nextcloud Server
 
 ## Präsentation
  
@@ -23,4 +23,4 @@
 - Showcase vorbereiten (dritte Gruppe)
 - Nextcloud AIO zum Laufen bringen und eine Datei hochladen
 - Optional: Eine App aus dem Nextcloud App Store installieren und ausprobieren
-- Optional: [Exkurs TLS](06-exkurs-tls.md) durchlesen und verstehen, warum euer Browser bei HTTP meckert
+- Optional: [Exkurs TLS](06-tls-exkurs.md) durchlesen und verstehen, warum euer Browser bei HTTP meckert

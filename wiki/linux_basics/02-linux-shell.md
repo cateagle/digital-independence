@@ -56,7 +56,7 @@ Erstellen Sie ein Skript, das Ihren Dokumentenordner in einem komprimierten Arch
 	 ```
 
 Dieses Skript erstellt eine zeitgestempelte Sicherung Ihres Dokumentenordners. Versuchen Sie, es zu ändern, um andere Ordner zu sichern oder es mit cron zu automatisieren!
-Die Shell ist Ihre Hauptschnittstelle zu Linux. Wenn Sie Windows gewohnt sind, stellen Sie sie sich als übergeladene Eingabeaufforderung vor. Bash ist die häufigste Shell unter Linux.
+Die [Shell](../glossar.md#shell) ist Ihre Hauptschnittstelle zu Linux. Wenn Sie Windows gewohnt sind, stellen Sie sie sich als übergeladene Eingabeaufforderung vor. [Bash](../glossar.md#bash) ist die häufigste Shell unter Linux.
 
 ## Was ist die Shell?
 - Die Shell ermöglicht es Ihnen, Befehle einzugeben, um mit dem System zu interagieren.
@@ -217,7 +217,7 @@ Die Shell ist das Herz von Linux. Das Erlernen grundlegender Befehle und Funktio
 
 ## Terminal öffnen
 
-Unter Ubuntu drücken Sie `Strg+Alt+T`, um das Terminal zu öffnen. Sie können auch im Anwendungsmenü nach „Terminal" suchen.
+Unter [Ubuntu](../glossar.md#ubuntu) drücken Sie `Strg+Alt+T`, um das [Terminal](../glossar.md#terminal) zu öffnen. Sie können auch im Anwendungsmenü nach „Terminal" suchen.
 
 **Windows-Analogie:** Wie das Öffnen der Eingabeaufforderung, aber Sie werden es unter Linux viel häufiger verwenden. Das Terminal ist Ihr Hauptwerkzeug für die Interaktion mit dem System.
 

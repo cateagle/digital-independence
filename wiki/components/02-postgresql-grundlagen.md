@@ -2,7 +2,7 @@
 
 ## 1. Was ist PostgreSQL?
 
-PostgreSQL (kurz: "Postgres") ist eine robuste, quelloffene relationale Datenbank. Sie ist die Standardwahl für viele Self-Hosting-Projekte und unterstützt komplexe Abfragen, JSON, Volltextsuche und vieles mehr.
+PostgreSQL (kurz: "Postgres") ist eine robuste, quelloffene relationale Datenbank. Sie ist die Standardwahl für viele [Self-Hosting](../glossar.md#self-hosting)-Projekte und unterstützt komplexe Abfragen, [JSON](../glossar.md#json-javascript-object-notation), Volltextsuche und vieles mehr.
 
 Postgres läuft als Dienst im Hintergrund und nimmt Verbindungen entgegen - ähnlich wie ein Webserver, nur für Datenbankabfragen.
 
@@ -170,7 +170,7 @@ docker exec -it postgres psql -U postgres -c "SHOW config_file;"
 
 ## 7. Mit docker-compose betreiben (empfohlen)
 
-Für echte Projekte ist docker-compose die bessere Wahl. Damit laufen App und Datenbank im selben Netzwerk und können sich gegenseitig per Servicenamen ansprechen.
+Für echte Projekte ist [Docker Compose](../glossar.md#docker-compose) die bessere Wahl. Damit laufen App und Datenbank im selben Netzwerk und können sich gegenseitig per Servicenamen ansprechen.
 
 **docker-compose.yml:**
 ```yaml
@@ -215,7 +215,7 @@ docker compose logs db
 
 ## 8. Backups mit pg_dump
 
-`pg_dump` erstellt ein konsistentes Backup einer einzelnen Datenbank. Es wird direkt im Container ausgeführt.
+[`pg_dump`](../glossar.md#pg_dump) erstellt ein konsistentes Backup einer einzelnen Datenbank. Es wird direkt im Container ausgeführt.
 
 **Einfaches Backup erstellen:**
 ```bash
@@ -282,7 +282,7 @@ docker logs postgres       # Fehlermeldung im Log?
 - Umgebungsvariablen beim `docker run` prüfen
 
 **Daten nach Neustart weg?**
-- Sicherstellen, dass ein Volume (`-v postgres_data:/var/lib/postgresql/data`) angegeben ist
+- Sicherstellen, dass ein [Volume](../glossar.md#volume-docker) (`-v postgres_data:/var/lib/postgresql/data`) angegeben ist
 - Named Volumes (`postgres_data`) bleiben erhalten, anonyme Volumes nicht
 
 **Welche PostgreSQL-Version läuft im Container?**

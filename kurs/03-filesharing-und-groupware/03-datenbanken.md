@@ -6,10 +6,10 @@ Nextcloud unterstützt vier Datenbanken:
 
 | Datenbank  | Empfohlen für                | Nextcloud-Support        |
 |------------|------------------------------|--------------------------|
-| PostgreSQL | Mittlere bis große Instanzen | ✅ Gut unterstützt       |
-| MariaDB    | Mittlere Instanzen           | ✅ Gut unterstützt       |
-| MySQL      | Wie MariaDB                  | ✅ Gut unterstützt       |
-| SQLite     | Einzelpersonen, Tests        | ⚠️ Nicht für Echtbetrieb |
+| [PostgreSQL](../../wiki/glossar.md#postgresql) | Mittlere bis große Instanzen | ✅ Gut unterstützt       |
+| [MariaDB](../../wiki/glossar.md#mariadb)    | Mittlere Instanzen           | ✅ Gut unterstützt       |
+| [MySQL](../../wiki/glossar.md#mysql)      | Wie MariaDB                  | ✅ Gut unterstützt       |
+| [SQLite](../../wiki/glossar.md#sqlite)     | Einzelpersonen, Tests        | ⚠️ Nicht für Echtbetrieb |
 
 Die [offizielle Nextcloud-Dokumentation](https://docs.nextcloud.com/server/latest/admin_manual/configuration_database/linux_database_configuration.html) empfiehlt **PostgreSQL oder MariaDB** für alle Installationen, die mehr als eine Person oder mehr als ein paar Dateien umfassen.
 
@@ -20,9 +20,9 @@ Die [offizielle Nextcloud-Dokumentation](https://docs.nextcloud.com/server/lates
 SQLite speichert die gesamte Datenbank in einer Datei. Das ist für viele kleine Dienste eine vernünftige Wahl, aber Nextcloud hat spezifische Probleme damit:
 
 - **Gleichzeitige Schreibzugriffe:** Wenn mehrere Tabs, der Sync-Client und ein Hintergrundjob gleichzeitig auf die Datenbank zugreifen, sperrt SQLite die Datei. Das führt zu Fehlern und Timeouts.
-- **Keine Volltextsuche:** Nextcloud's Suche funktioniert mit SQLite eingeschränkt.
+- **Keine [Volltextsuche](../../wiki/glossar.md#fulltext-search-volltextsuche):** Nextcloud's Suche funktioniert mit SQLite eingeschränkt.
 - **Keine Online-Backup-Möglichkeit:** PostgreSQL und MariaDB lassen sich ohne Downtime sichern.
-- **Migrations-Probleme:** Nextcloud-Updates, die Datenbankmigrationen ausführen, können mit SQLite länger dauern oder fehlschlagen.
+- **Migrations-Probleme:** Nextcloud-Updates, die [Datenbankmigrationen](../../wiki/glossar.md#datenbank-migration) ausführen, können mit SQLite länger dauern oder fehlschlagen.
 
 SQLite ist für einen schnellen Test in Ordnung. Für alles, was lange stabil laufen soll, ist es das falsche Werkzeug.
 
@@ -59,9 +59,9 @@ Wer eine andere Datenbank will, muss das manuelle Docker-Compose-Setup nehmen. F
 
 ## Redis: Kein Ersatz, sondern Ergänzung
 
-AIO startet auch einen **Redis-Container**. Redis ist keine Alternative zur Datenbank. Es ist ein Ergänzungsdienst:
+AIO startet auch einen **[Redis](../../wiki/glossar.md#redis)-Container**. Redis ist keine Alternative zur Datenbank. Es ist ein Ergänzungsdienst:
 
-- **Dateisperren:** Nextcloud nutzt Redis, um zu verhindern, dass zwei Clients dieselbe Datei gleichzeitig beschreiben. Das nennt sich "Transactional File Locking".
+- **Dateisperren:** Nextcloud nutzt Redis, um zu verhindern, dass zwei Clients dieselbe Datei gleichzeitig beschreiben. Das nennt sich "[Transactional File Locking](../../wiki/glossar.md#transactional-file-locking)".
 - **Session-Cache:** Angemeldete Nutzer-Sessions werden in Redis gecacht, nicht jedes Mal aus der Datenbank gelesen.
 - **Hintergrundaufgaben:** Manche Nextcloud-Jobs nutzen Redis als Warteschlange.
 

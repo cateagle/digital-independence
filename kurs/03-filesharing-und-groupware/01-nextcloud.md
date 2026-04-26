@@ -26,13 +26,13 @@ Wenn man sich für eine einzige Sache zum selbst hosten entscheiden muss, dann i
 - **Sprache:** PHP (Backend), Vue.js (Frontend)
 - **Quellcode:** [github.com/nextcloud/server](https://github.com/nextcloud/server)
 
-Die AGPL hat einen wichtigen Effekt: Wer Nextcloud als SaaS-Dienst anbietet, muss seinen eigenen Code unter AGPL veröffentlichen. Das schützt die Community davor, dass jemand das Projekt einfach abzweigt und proprietär weiterbetreibt. Nextcloud lässt alle Contributors weiterhin Eigentümer an ihrem begetragenden Code bleiben, sodass die Nextcloud GmbH nicht in der Lage ist den Code zu privatisieren ohne die Zustimmung aller aktuell über 600 [Autoren](https://github.com/nextcloud/server/blob/master/AUTHORS) einzuholen.
+Die [AGPL](../../wiki/glossar.md#agpl-gnu-affero-general-public-license) hat einen wichtigen Effekt: Wer Nextcloud als [SaaS](../../wiki/glossar.md#saas-software-as-a-service)-Dienst anbietet, muss seinen eigenen Code unter AGPL veröffentlichen. Das schützt die Community davor, dass jemand das Projekt einfach abzweigt und proprietär weiterbetreibt. Nextcloud lässt alle Contributors weiterhin Eigentümer an ihrem begetragenden Code bleiben, sodass die Nextcloud GmbH nicht in der Lage ist den Code zu privatisieren ohne die Zustimmung aller aktuell über 600 [Autoren](https://github.com/nextcloud/server/blob/master/AUTHORS) einzuholen.
 
 ---
 
 ## Geschichte: Woher kommt Nextcloud?
 
-Nextcloud ist 2016 aus einem Fork von ownCloud entstanden.
+Nextcloud ist 2016 aus einem [Fork](../../wiki/glossar.md#fork) von [ownCloud](../../wiki/glossar.md#owncloud) entstanden.
 
 Frank Karlitschek, einer der Gründer von ownCloud, verließ das Unternehmen im Streit über die Ausrichtung (zu viel Enterprise-Fokus, zu wenig Community) und gründete Nextcloud GmbH. Das ist ein klassisches Open-Source-Phänomen: Wenn die Community und das Unternehmen in verschiedene Richtungen wollen, forkt die Community.
 
@@ -42,7 +42,7 @@ ownCloud existiert noch, ist aber seitdem weit hinter Nextcloud zurückgefallen,
 
 ## Geschäftsmodell: Wie verdient Nextcloud Geld?
 
-Nextcloud GmbH betreibt ein **Open-Core-Modell kombiniert mit Professional Services**:
+Nextcloud GmbH betreibt ein **[Open-Core](../../wiki/glossar.md#open-core)-Modell kombiniert mit Professional Services**:
 
 
 Nextcloud Community (kostenlos, AGPLv3)
@@ -82,11 +82,11 @@ Durch die große Community und den offenen Code haben die Partner den Vorteil, d
 ### Kleine Teams / Vereine
 - Gemeinsame Dateiablage ohne Dropbox-Abo
 - Kalender teilen ohne Microsoft/Google-Abhängigkeit
-- Aufgabenverwaltung (Nextcloud Deck, ähnlich wie Trello)
+- Aufgabenverwaltung ([Nextcloud Deck](../../wiki/glossar.md#nextcloud-deck), ähnlich wie Trello)
 - Videokonferenzen
 
 ### Unternehmen und Behörden
-- DSGVO-konforme Alternative zu Microsoft 365
+- [DSGVO](../../wiki/glossar.md#dsgvo-datenschutz-grundverordnung)-konforme Alternative zu Microsoft 365
 - Dateiaustausch mit externen Partnern ohne Daten an US-Anbieter
 - Viele Behörden in Deutschland und Frankreich nutzen Nextcloud aktiv
 
@@ -106,9 +106,9 @@ Aktuell suchen sehr viele Organisationen nach Alternativen zu den Amerikanischen
 Nextcloud ist keine eierlegende Wollmilchsau. Kritisch betrachtet:
 
 - **Kein E-Mail-Server**: die Mail-App ist ein Client, kein Server
-- **Kein vollwertiger Office-Ersatz**: Collabora/OnlyOffice sind eigenständige Projekte, die eingebunden werden
+- **Kein vollwertiger Office-Ersatz**: [Collabora Online](../../wiki/glossar.md#collabora-online)/[OnlyOffice](../../wiki/glossar.md#onlyoffice) sind eigenständige Projekte, die eingebunden werden
 - **Wartungsaufwand**: Nextcloud braucht regelmäßige Updates und Pflege
-- **Performance**: auf schwacher Hardware oder mit SQLite als Datenbank langsam bei vielen Nutzern (privat eher irrelevant)
+- **Performance**: auf schwacher Hardware oder mit [SQLite](../../wiki/glossar.md#sqlite) als Datenbank langsam bei vielen Nutzern (privat eher irrelevant)
 - **PHP**: Sehr Klassischer Technologie-Stack und nicht mehr ganz so modern, aber es gibt extrem viele Entwickler, die damit umgehen können.
 
 Das sind keine Gründe, es nicht zu nutzen aber Gründe, realistische Erwartungen zu haben.

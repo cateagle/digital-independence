@@ -2,7 +2,7 @@
 
 ## 1. Was ist TLS/SSL?
 
-TLS (Transport Layer Security) – oft noch SSL genannt, obwohl SSL veraltet ist – ist das Protokoll, das die Verbindung zwischen Browser und Server verschlüsselt. Das ist der Unterschied zwischen `http://` und `https://`.
+[TLS](../glossar.md#tls-transport-layer-security) (Transport Layer Security) – oft noch [SSL](../glossar.md#ssl-secure-sockets-layer) genannt, obwohl SSL veraltet ist – ist das Protokoll, das die Verbindung zwischen Browser und Server verschlüsselt. Das ist der Unterschied zwischen `http://` und `https://`.
 
 **Ohne TLS:**
 ```
@@ -33,13 +33,13 @@ Das Zertifikat enthält:
 - Den Domainnamen (z.B. `example.com`)
 - Den öffentlichen Schlüssel des Servers
 - Gültigkeitsdauer
-- Die Signatur einer Zertifizierungsstelle (CA)
+- Die Signatur einer [Zertifizierungsstelle](../glossar.md#ca-certificate-authority) (CA)
 
 **Zertifizierungsstellen (CA):** Vertrauenswürdige Organisationen, die Zertifikate ausstellen und deren Echtheit bestätigen. Dein Browser vertraut einer Liste bekannter CAs – wenn eine CA ein Zertifikat signiert hat, akzeptiert der Browser es.
 
 ## 3. Was ist Let's Encrypt?
 
-Let's Encrypt ist eine kostenlose, automatisierte Zertifizierungsstelle. Sie stellt TLS-Zertifikate kostenlos aus, die von allen modernen Browsern anerkannt werden.
+[Let's Encrypt](../glossar.md#lets-encrypt) ist eine kostenlose, automatisierte Zertifizierungsstelle. Sie stellt TLS-Zertifikate kostenlos aus, die von allen modernen Browsern anerkannt werden.
 
 Vor Let's Encrypt kosteten Zertifikate oft 50–200 € pro Jahr. Let's Encrypt hat HTTPS für alle zugänglich gemacht.
 
@@ -64,7 +64,7 @@ sudo certbot --nginx -d example.com -d www.example.com
 ```
 
 certbot wird:
-1. Deine Domain-Inhaberschaft verifizieren (ACME-Challenge)
+1. Deine Domain-Inhaberschaft verifizieren ([ACME-Challenge](../glossar.md#acme-challenge))
 2. Das Zertifikat ausstellen
 3. Die Nginx-Konfiguration automatisch anpassen
 

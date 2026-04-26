@@ -2,7 +2,7 @@
 
 ## 1. Was ist Redis?
 
-Redis steht für "Remote Dictionary Server". Es ist ein **In-Memory Key-Value-Speicher** - alle Daten liegen im RAM, weshalb Zugriffe extrem schnell sind (typisch unter 1 Millisekunde).
+Redis steht für "Remote Dictionary Server". Es ist ein **[In-Memory Key-Value-Speicher](../glossar.md#key-value-speicher-key-value-store)** - alle Daten liegen im RAM, weshalb Zugriffe extrem schnell sind (typisch unter 1 Millisekunde).
 
 Redis speichert Daten als Schlüssel-Wert-Paare:
 ```
@@ -10,14 +10,14 @@ Schlüssel: "user:42:session"
 Wert:      "eyJhbGciOiJIUzI1NiJ9..."
 ```
 
-**Redis ist keine Ersatz-Datenbank für PostgreSQL.** Es ergänzt eine Hauptdatenbank als schneller Zwischenspeicher oder für spezielle Aufgaben wie Sessions und Queues.
+**Redis ist keine Ersatz-Datenbank für [PostgreSQL](../glossar.md#postgresql).** Es ergänzt eine Hauptdatenbank als schneller Zwischenspeicher oder für spezielle Aufgaben wie Sessions und Queues.
 
 **Typische Einsatzzwecke:**
-- Cache (Ergebnisse teurer Datenbankabfragen zwischenspeichern)
+- [Cache](../glossar.md#cache) (Ergebnisse teurer Datenbankabfragen zwischenspeichern)
 - Session-Speicher (Wer ist gerade eingeloggt?)
 - Job-Queues (Hintergrundaufgaben verwalten)
-- Rate-Limiting (Anfragen pro IP zählen)
-- Pub/Sub (Nachrichten zwischen Prozessen verteilen)
+- [Rate Limiting](../glossar.md#rate-limiting) (Anfragen pro IP zählen)
+- [Pub/Sub](../glossar.md#pubsub-publishsubscribe) (Nachrichten zwischen Prozessen verteilen)
 
 ## 2. Installation mit Docker
 
@@ -289,8 +289,8 @@ services:
 | Anwendungsfall | Empfehlung |
 |---|---|
 | Nur Cache, Datenverlust egal | Keine Persistenz nötig |
-| Sessions, Datenverlust von ~1s akzeptabel | AOF mit `everysec` |
-| Maximale Datensicherheit | AOF mit `always` + RDB als Backup |
+| Sessions, Datenverlust von ~1s akzeptabel | [AOF](../glossar.md#aof-append-only-file) mit `everysec` |
+| Maximale Datensicherheit | AOF mit `always` + [RDB](../glossar.md#rdb-redis-database-snapshot) als Backup |
 | Schnelle Backups, selten Schreibzugriffe | Nur RDB |
 
 **Persistenz deaktivieren (für reinen Cache):**

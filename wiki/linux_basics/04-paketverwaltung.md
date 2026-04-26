@@ -164,7 +164,7 @@ Description: interactive processes viewer
 
 ## Repositories verstehen
 
-Woher kommen die Pakete eigentlich? Ubuntu nutzt sogenannte **Repositories** (kurz: Repos) – das sind Server, auf denen geprüfte und signierte Software liegt.
+Woher kommen die Pakete eigentlich? Ubuntu nutzt sogenannte **[Repositories](../glossar.md#repository-apt)** (kurz: Repos) – das sind Server, auf denen geprüfte und signierte Software liegt.
 
 **Windows-Analogie:** Ein Repository ist wie der Microsoft Store-Katalog: eine kuratierte Liste von vertrauenswürdiger Software.
 

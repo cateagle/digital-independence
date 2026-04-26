@@ -2,9 +2,9 @@
 
 ## 1. Was ist ein VPN und warum brauchst du es?
 
-Ein VPN (Virtual Private Network) baut einen verschlüsselten Tunnel zwischen deinem Gerät und deinem Server.
+Ein [VPN](../glossar.md#vpn-virtual-private-network) (Virtual Private Network) baut einen verschlüsselten Tunnel zwischen deinem Gerät und deinem Server.
 
-Beim Self-Hosting willst du damit interne Dienste absichern: Datenbanken, Admin-UIs oder Monitoring-Tools sollen nicht direkt aus dem Internet erreichbar sein. Du hältst sie hinter der Firewall und greifst nur über das VPN darauf zu.
+Beim [Self-Hosting](../glossar.md#self-hosting) willst du damit interne Dienste absichern: Datenbanken, Admin-UIs oder Monitoring-Tools sollen nicht direkt aus dem Internet erreichbar sein. Du hältst sie hinter der [Firewall](../glossar.md#firewall) und greifst nur über das VPN darauf zu.
 
 **Windows-Analogie:** Das VPN im Home-Office – du verbindest dich mit dem Firmennetz und kannst interne Systeme nutzen, die sonst nicht erreichbar wären.
 
@@ -27,7 +27,7 @@ wg --version
 
 ## 3. Schlüsselpaar erzeugen
 
-WireGuard nutzt Public-Key-Kryptografie – ähnlich wie SSH. Jedes Gerät (Server und Client) bekommt ein eigenes Schlüsselpaar: einen privaten Schlüssel, der geheim bleibt, und einen öffentlichen Schlüssel, den du weitergibst.
+WireGuard nutzt Public-Key-Kryptografie – ähnlich wie [SSH](../glossar.md#ssh-secure-shell). Jedes Gerät (Server und Client) bekommt ein eigenes Schlüsselpaar: einen privaten Schlüssel, der geheim bleibt, und einen öffentlichen Schlüssel, den du weitergibst.
 
 ### Auf dem Server
 
@@ -101,7 +101,7 @@ sudo chmod 600 /etc/wireguard/wg0.conf
 
 ## 5. Firewall-Regeln für WireGuard anpassen
 
-WireGuard kommuniziert über UDP auf Port 51820. Dieser Port muss in der Firewall offen sein:
+WireGuard kommuniziert über [UDP](../glossar.md#udp-user-datagram-protocol) auf [Port](../glossar.md#port) 51820. Dieser Port muss in der Firewall offen sein:
 
 ```bash
 # WireGuard-Port in UFW freigeben

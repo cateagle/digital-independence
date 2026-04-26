@@ -30,7 +30,7 @@ Nutzer
 
 | Plattform                      | Wofür                                                |
 |--------------------------------|------------------------------------------------------|
-| **GitHub / GitLab / Codeberg** | Code, Issues, Pull Requests, Discussions             |
+| **GitHub / GitLab / Codeberg** | Code, Issues, [Pull Requests](../../wiki/glossar.md#pull-request-pr), Discussions             |
 | **Discord / Slack**            | Echtzeitkommunikation, Support                       |
 | **Reddit**                     | Allgemeine Diskussionen (z.B. r/selfhosted)          |
 | **Foren**                      | Langfristige Diskussionen (z.B. Discourse-Instanzen) |
@@ -95,7 +95,7 @@ Bei Open Source:
 - Die Community kann das Projekt forken und weiterführen
 - Du kannst selbst hosten, anstatt auf externe Dienste angewiesen zu sein
 
-**Reale Beispiele für Vendor Lock-in-Probleme:**
+**Reale Beispiele für [Vendor Lock-in](../../wiki/glossar.md#lock-in--vendor-lock-in)-Probleme:**
 - Google stellt Dienste ein (Google Reader, Stadia, ...)
 - Heroku schafft Free-Tier ab
 - Twitter/X dreht die API-Preise hoch
@@ -103,7 +103,7 @@ Bei Open Source:
 
 ### 3. Kostenlos nutzbar
 
-Die meisten Open-Source-Anwendungen kosten nichts in der Anschaffung. Gerade für den Einstieg ins Self-Hosting ist das ideal.
+Die meisten Open-Source-Anwendungen kosten nichts in der Anschaffung. Gerade für den Einstieg ins [Self-Hosting](../../wiki/glossar.md#self-hosting) ist das ideal.
 
 ### 4. Aktive Entwicklung durch die Community
 
@@ -125,15 +125,15 @@ Schau dir an, woraus ein typischer Self-Hosting-Stack besteht:
 
 | Komponente       | Software             | Lizenz             |
 |------------------|----------------------|--------------------|
-| Betriebssystem   | Ubuntu / Debian      | GPL                |
-| Web-Server       | nginx                | BSD                |
-| Datenbank        | PostgreSQL           | PostgreSQL License |
-| Container        | Docker               | Apache 2.0         |
-| Orchestrierung   | Kubernetes           | Apache 2.0         |
-| Reverse Proxy    | Traefik / Caddy      | MIT / Apache 2.0   |
-| Monitoring       | Grafana + Prometheus | AGPL / Apache 2.0  |
-| Passwort-Manager | Vaultwarden          | GPL                |
-| Cloud-Storage    | Nextcloud            | AGPL               |
+| Betriebssystem   | [Ubuntu](../../wiki/glossar.md#ubuntu) / [Debian](../../wiki/glossar.md#debian)      | [GPL](../../wiki/glossar.md#gpl-gnu-general-public-license)                |
+| Web-Server       | [nginx](../../wiki/glossar.md#nginx-engine-x)                | [BSD](../../wiki/glossar.md#bsd-berkeley-software-distribution)                |
+| Datenbank        | [PostgreSQL](../../wiki/glossar.md#postgresql)           | PostgreSQL License |
+| Container        | [Docker](../../wiki/glossar.md#docker)               | [Apache 2.0](../../wiki/glossar.md#apache-20-apache-license-20)         |
+| Orchestrierung   | [Kubernetes](../../wiki/glossar.md#kubernetes)           | Apache 2.0         |
+| Reverse Proxy    | Traefik / Caddy      | [MIT](../../wiki/glossar.md#mit-lizenz) / Apache 2.0   |
+| Monitoring       | Grafana + Prometheus | [AGPL](../../wiki/glossar.md#agpl-gnu-affero-general-public-license) / Apache 2.0  |
+| Passwort-Manager | [Vaultwarden](../../wiki/glossar.md#vaultwarden)          | GPL                |
+| Cloud-Storage    | [Nextcloud](../../wiki/glossar.md#nextcloud)            | AGPL               |
 | Git-Server       | Gitea / Forgejo      | MIT                |
 
 Du könntest den gleichen Stack mit proprietärer Software aufbauen und würdest tausende Euro pro Jahr zahlen.
