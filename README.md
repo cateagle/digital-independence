@@ -12,7 +12,7 @@ Hier gibt es einen Unterordner pro Termin mit den Kursmaterialien.
 
 ## 2. Showcases
 
-Hier kommen Beispiele von großartiger Open-Source Software mit Beschreibungen und hilfreichen Ressourcen rein.
+Hier kommen später Beispiele von großartiger Open-Source Software mit Beschreibungen und hilfreichen Ressourcen rein.
 
 [**Hier geht's zu den Showcases**](showcases/README.md)
 
@@ -21,3 +21,7 @@ Hier kommen Beispiele von großartiger Open-Source Software mit Beschreibungen u
 Nicht alles passt in den normalen Kurs rein. Daher gibt es ein Wiki, wo wir Informationen zusammentragen, die wir sonst aus verschiedenen Quellen zusammentragen müssten.
 
 [**Hier geht's zum Wiki**](wiki/README.md)
+
+### Glossar
+
+Weißt du nicht, wofür die ganzen Fachbegriffe und Abkürzungen stehen? Im [**Glossar**](wiki/glossar.md) sind viele der obskuren Begriffe kurz eingeordnet.
