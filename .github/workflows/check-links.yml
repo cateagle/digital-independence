@@ -1,0 +1,26 @@
+name: Check Links
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Cache doc-link-checker binary
+        id: cache-binary
+        uses: actions/cache@v4
+        with:
+          path: doc-link-checker/target/release/doc-link-checker
+          key: ${{ runner.os }}-doc-link-checker-${{ hashFiles('doc-link-checker/Cargo.lock', 'doc-link-checker/src/**') }}
+
+      - name: Build doc-link-checker
+        if: steps.cache-binary.outputs.cache-hit != 'true'
+        working-directory: doc-link-checker
+        run: cargo build --release
+
+      - name: Check links
+        run: ./doc-link-checker/target/release/doc-link-checker -d . -r -e md,mdx --exclude doc-link-checker/target --error

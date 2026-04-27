@@ -1,0 +1,13 @@
+[package]
+name = "doc-link-checker"
+version = "0.1.0"
+edition = "2024"
+description = "Checks that all file-relative links in markdown documentation exist on the filesystem"
+
+[[bin]]
+name = "doc-link-checker"
+path = "src/bin/doc_link_checker.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+pulldown-cmark = "0.13"
